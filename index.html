@@ -102,7 +102,13 @@ const state = {estate:"all", kind:"all", source:"all", q:""};
 
 function fmtPrice(v){
   if(v==null) return "—";
-  return v>=1000000 ? "$"+(v/1000000).toLocaleString("zh-HK",{maximumFractionDigits:2})+"萬" : "$"+v.toLocaleString("zh-HK");
+  if(v>=1000000){
+    const m=v/1000000;
+    const s=m.toLocaleString("zh-HK",{minimumFractionDigits:2,maximumFractionDigits:2});
+    return "$"+s+"萬";
+  }
+  if(v>=10000) return "$"+(v/10000).toLocaleString("zh-HK",{maximumFractionDigits:1})+"萬";
+  return "$"+v.toLocaleString("zh-HK");
 }
 function fmtArea(v){ return v==null ? "—" : v+"呎"; }
 function fmtRate(v){ return v==null ? "—" : "$"+Number(v).toLocaleString("zh-HK"); }
