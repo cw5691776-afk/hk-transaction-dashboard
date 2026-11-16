@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-16T10:16:29+00:00",
+  "generatedAt": "2026-11-16T10:31:52+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -50,6 +50,12 @@
     }
   ],
   "sources": {
+    "midland": {
+      "status": "failed",
+      "records": 0,
+      "latestDate": null,
+      "errors": []
+    },
     "centaline": {
       "status": "ok",
       "records": 474,
@@ -57,16 +63,15 @@
       "errors": []
     },
     "hse28": {
-      "status": "ok",
-      "records": 33,
-      "latestDate": "2026-11-12",
-      "errors": []
-    },
-    "midland": {
-      "status": "ok",
-      "records": 50,
-      "latestDate": "2026-11-11",
-      "errors": []
+      "status": "failed",
+      "records": 0,
+      "latestDate": null,
+      "errors": [
+        "tak-bo-garden: HTTP Error 403: Forbidden",
+        "hong-wah-court: HTTP Error 403: Forbidden",
+        "the-holborn: HTTP Error 403: Forbidden",
+        "metro-town: HTTP Error 403: Forbidden"
+      ]
     }
   },
   "records": [
@@ -179,7 +184,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -263,7 +267,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -295,7 +298,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -327,7 +329,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -359,7 +360,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -391,7 +391,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -449,7 +448,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -481,7 +479,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -595,7 +592,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -627,7 +623,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -659,7 +654,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -688,8 +682,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "美聯 Midland"
+        "28Hse"
       ]
     },
     {
@@ -746,8 +739,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "美聯 Midland"
+        "28Hse"
       ]
     },
     {
@@ -778,7 +770,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -836,7 +827,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -947,7 +937,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1172,7 +1161,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1310,7 +1298,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1424,7 +1411,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1647,7 +1633,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1705,7 +1690,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1791,7 +1775,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -2071,7 +2054,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -2132,7 +2114,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -12041,5 +12022,11 @@
     "sun-sing-centre": 57,
     "the-holborn": 101
   },
-  "updateErrors": []
+  "updateErrors": [
+    "midland: HTTP Error 403: Forbidden",
+    "hse28: tak-bo-garden: HTTP Error 403: Forbidden",
+    "hse28: hong-wah-court: HTTP Error 403: Forbidden",
+    "hse28: the-holborn: HTTP Error 403: Forbidden",
+    "hse28: metro-town: HTTP Error 403: Forbidden"
+  ]
 }
