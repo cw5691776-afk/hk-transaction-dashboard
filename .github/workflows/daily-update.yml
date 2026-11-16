@@ -1,0 +1,56 @@
+name: Daily transaction refresh
+description: Refresh the HK estate transaction dataset from public provider pages.
+on:
+  schedule:
+    # 07:10 HKT = 23:10 UTC (previous day)
+    - cron: "10 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: transaction-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update transaction data
+        run: python scripts/update_data.py
+
+      - name: Commit refreshed dataset
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/transactions.json data/update-report.json data/source-state.json
+          if git diff --staged --quiet; then
+            echo "No dataset changes."
+          else
+            git commit -m "data: refresh estate transactions"
+            git push
+          fi
+
+  deploy:
+    needs: update
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-pages@v5
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4

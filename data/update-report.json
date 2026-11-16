@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "generatedAt": "2026-11-16T10:13:18+00:00",
+  "sources": {
+    "centaline": {
+      "status": "ok",
+      "records": 474,
+      "latestDate": "2026-11-04",
+      "errors": []
+    },
+    "hse28": {
+      "status": "ok",
+      "records": 33,
+      "latestDate": "2026-11-12",
+      "errors": []
+    },
+    "midland": {
+      "status": "ok",
+      "records": 50,
+      "latestDate": "2026-11-11",
+      "errors": []
+    }
+  },
+  "errors": [],
+  "recordCount": 438,
+  "action": "published"
+}

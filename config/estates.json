@@ -1,0 +1,126 @@
+{
+  "estates": [
+    {
+      "id": "tak-bo-garden",
+      "name": "得寶花園",
+      "aliases": [
+        "Tak Bo Garden",
+        "得寶花園"
+      ],
+      "district": "九龍灣",
+      "centaline": {
+        "type_codes": [
+          "1-UCROURFHQO",
+          "2-UCROURFHRO"
+        ]
+      },
+      "hse28": {
+        "estate_id": "2083"
+      },
+      "midland": {
+        "estate_id": "E00515",
+        "estate_names": [
+          "得寶花園",
+          "Tak Bo Garden"
+        ]
+      }
+    },
+    {
+      "id": "hong-wah-court",
+      "name": "康華苑",
+      "aliases": [
+        "Hong Wah Court",
+        "康華苑"
+      ],
+      "district": "藍田",
+      "centaline": {
+        "type_codes": [
+          "1-UCOFFRCXQJ",
+          "2-UCOFFRCXRJ"
+        ]
+      },
+      "hse28": {
+        "estate_id": "2011"
+      },
+      "midland": {
+        "estate_names": [
+          "康華苑",
+          "Hong Wah Court"
+        ],
+        "estate_id": "E00226"
+      }
+    },
+    {
+      "id": "sun-sing-centre",
+      "name": "新成中心",
+      "aliases": [
+        "Sun Sing Centre",
+        "新成中心"
+      ],
+      "district": "西灣河",
+      "centaline": {
+        "type_codes": [
+          "2-TXMNTHLXHT"
+        ]
+      },
+      "hse28": {
+        "estate_id": ""
+      },
+      "midland": {
+        "estate_names": [
+          "新成中心",
+          "Sun Sing Centre"
+        ],
+        "estate_id": "E00625"
+      }
+    },
+    {
+      "id": "the-holborn",
+      "name": "The Holborn",
+      "aliases": [
+        "The Holborn",
+        "THE HOLBORN"
+      ],
+      "district": "西灣河",
+      "centaline": {
+        "type_codes": [
+          "2-SGSPWWPSWS"
+        ]
+      },
+      "hse28": {
+        "estate_id": "23699"
+      },
+      "midland": {
+        "estate_names": [
+          "The Holborn",
+          "THE HOLBORN"
+        ],
+        "estate_id": "E000018462"
+      }
+    },
+    {
+      "id": "metro-town",
+      "name": "都會軒",
+      "aliases": [
+        "Metro Town",
+        "都會軒"
+      ],
+      "district": "紅磡",
+      "centaline": {
+        "type_codes": [
+          "2-ESPPWPPJPA"
+        ]
+      },
+      "hse28": {
+        "estate_id": "3053"
+      },
+      "midland": {
+        "estate_names": [
+          "都會軒",
+          "Metro Town"
+        ],
+        "estate_id": "E000000517"
+      }
+    }
+  ]
+}

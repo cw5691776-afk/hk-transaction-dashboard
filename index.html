@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>屋苑成交資訊對比</title>
+<style>
+  :root{
+    --ink:#15202b; --muted:#63717f; --line:#dfe5ea; --soft:#f6f8f9;
+    --accent:#0b6b5b; --accent-soft:#e7f2ef; --warn:#9a5b00; --warn-soft:#fdf3e2;
+    --danger:#a12a2a; --danger-soft:#fbeceb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"PingFang HK","Noto Sans HK","Microsoft JhengHei",system-ui,sans-serif;color:var(--ink);background:#fff;font-size:15px;line-height:1.5}
+  header{border-bottom:1px solid var(--line);padding:22px 20px 16px}
+  .wrap{max-width:1280px;margin:0 auto}
+  h1{font-size:21px;margin:0 0 4px;letter-spacing:.01em}
+  .sub{color:var(--muted);font-size:13px}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+  select,input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink)}
+  input[type=search]{min-width:220px}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font-size:12.5px;border:1px solid var(--line);background:#fff}
+  .dot{width:8px;height:8px;border-radius:50%;background:#9aa7b1}
+  .dot.ok{background:var(--accent)} .dot.warn{background:var(--warn)} .dot.err{background:var(--danger)}
+  main{padding:18px 20px 48px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:20px}
+  .estate{border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:#fff}
+  .estate h2{margin:0 0 2px;font-size:16px}
+  .estate .dist{color:var(--muted);font-size:12px;margin-bottom:9px}
+  .estate dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px}
+  .estate dt{color:var(--muted)} .estate dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+  .panel{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:14px}
+  .scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:12.5px;background:#fbfcfc;position:sticky;top:0}
+  tbody tr:hover{background:#fafcfc}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .src{display:inline-block;font-size:11.5px;padding:2px 7px;border-radius:5px;margin:1px 3px 1px 0;border:1px solid var(--line);background:#fff}
+  .src.centaline{border-color:#b9d8d1;background:#f2f9f7}
+  .src.hse{border-color:#c9d6ea;background:#f3f7fc}
+  .src.midland{border-color:#e5d1bd;background:#fdf7f0}
+  .kind{font-size:11.5px;padding:2px 7px;border-radius:5px}
+  .kind.registry{background:var(--accent-soft);color:var(--accent)}
+  .kind.market{background:var(--warn-soft);color:var(--warn)}
+  .warnrow{background:var(--danger-soft)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:12px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .empty{padding:28px;text-align:center;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:16px 20px;color:var(--muted);font-size:12.5px}
+  @media(max-width:640px){
+    header,main,footer{padding-left:12px;padding-right:12px}
+    h1{font-size:18px}
+    .cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>屋苑成交資訊對比</h1>
+    <div class="sub" id="meta">載入中…</div>
+    <div class="bar" id="controls"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="cards" id="estateCards"></div>
+  <div class="panel">
+    <div class="panel-head">
+      <strong>成交記錄</strong>
+      <span class="legend" id="legend"></span>
+    </div>
+    <div class="scroll">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>成交日期</th><th>單位</th><th class="num">成交價</th><th class="num">實用面積</th>
+            <th class="num">實用呎價</th><th>類型</th><th>資料來源</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>未有符合條件嘅成交記錄</div>
+  </div>
+  <p class="note">
+    資料來自中原 Centadata、28Hse、美聯 Midland 公開成交頁面；多數成交源自土地註冊處資料，頁面已盡量合併同一宗成交並保留所有來源標籤。
+    「市場成交」指尚未登記或代理成交，「註冊成交」指土地註冊處成交。資料只供參考。
+  </p>
+</main>
+<footer><div class="wrap" id="footer"></div></footer>
+
+<script>
+const PROVIDERS = [
+  {id:"centaline", label:"中原 Centadata", cls:"centaline"},
+  {id:"hse28", label:"28Hse", cls:"hse"},
+  {id:"midland", label:"美聯 Midland", cls:"midland"}
+];
+let DATA = null;
+const state = {estate:"all", kind:"all", source:"all", q:""};
+
+function fmtPrice(v){
+  if(v==null) return "—";
+  return v>=1000000 ? "$"+(v/1000000).toLocaleString("zh-HK",{maximumFractionDigits:2})+"萬" : "$"+v.toLocaleString("zh-HK");
+}
+function fmtArea(v){ return v==null ? "—" : v+"呎"; }
+function fmtRate(v){ return v==null ? "—" : "$"+Number(v).toLocaleString("zh-HK"); }
+function fmtDate(d){ return d ? d.split("-").reverse().slice(0,2).join("/")+" ("+d.slice(0,4)+")" : "—"; }
+
+function sourceClass(src){
+  if(src.includes("中原")) return "centaline";
+  if(src.includes("28Hse")) return "hse";
+  return "midland";
+}
+
+function estateOptions(){
+  const sel = document.getElementById("estateSel");
+  DATA.estates.forEach(e=>{
+    const o=document.createElement("option"); o.value=e.id; o.textContent=e.name+"（"+e.district+"）"; sel.appendChild(o);
+  });
+}
+
+function sourceHealth(){
+  const el=document.getElementById("sourceHealth");
+  el.innerHTML="";
+  PROVIDERS.forEach(p=>{
+    const s=(DATA.sources&&DATA.sources[p.id])||{status:"unknown"};
+    const chip=document.createElement("span");
+    chip.className="chip";
+    const dot=document.createElement("span");
+    dot.className="dot "+(s.status==="ok"?"ok":s.status==="failed"?"err":"warn");
+    chip.appendChild(dot);
+    chip.appendChild(document.createTextNode(p.label+" "+(s.records??"0")+"宗"+(s.latestDate?" · 最新 "+s.latestDate:"")));
+    el.appendChild(chip);
+  });
+}
+
+function renderCards(){
+  const wrap=document.getElementById("estateCards");
+  wrap.innerHTML="";
+  DATA.estates.forEach(e=>{
+    const rows=DATA.records.filter(r=>r.estateId===e.id);
+    const latest=rows.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""))[0];
+    const rates=rows.filter(r=>r.saleableHkdPerSqft).map(r=>r.saleableHkdPerSqft);
+    const avg=rates.length?Math.round(rates.reduce((a,b)=>a+b,0)/rates.length):null;
+    const div=document.createElement("div");
+    div.className="estate";
+    div.innerHTML=`<h2>${e.name}</h2><div class="dist">${e.district} · ${rows.length}宗記錄</div>
+      <dl>
+        <dt>最新成交</dt><dd>${latest?fmtPrice(latest.priceHKD):"—"}</dd>
+        <dt>成交日期</dt><dd>${latest?latest.date:"—"}</dd>
+        <dt>平均實用呎價</dt><dd>${avg?fmtRate(avg):"—"}</dd>
+      </dl>`;
+    div.style.cursor="pointer";
+    div.addEventListener("click",()=>{state.estate=e.id;document.getElementById("estateSel").value=e.id;render();});
+    wrap.appendChild(div);
+  });
+}
+
+function filtered(){
+  const q=state.q.trim().toLowerCase();
+  return DATA.records.filter(r=>{
+    if(state.estate!=="all" && r.estateId!==state.estate) return false;
+    if(state.kind!=="all" && r.transactionKind!==state.kind) return false;
+    if(state.source!=="all" && !(r.sources||[]).some(s=>s===state.source)) return false;
+    if(q){
+      const hay=[r.estate,r.address,r.block,r.floor,r.unit].filter(Boolean).join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderTable(){
+  const rows=filtered().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  const tb=document.getElementById("tbody");
+  tb.innerHTML="";
+  document.getElementById("empty").hidden=rows.length>0;
+  rows.forEach(r=>{
+    const tr=document.createElement("tr");
+    if(r.hasDiscrepancy) tr.className="warnrow";
+    const unit=[r.block?r.block+"座":"",r.floor?r.floor+"樓":"",r.unit?r.unit+"室":""].filter(Boolean).join(" ")||(r.address||"—");
+    const kind=r.transactionKind==="registry"?'<span class="kind registry">註冊成交</span>':'<span class="kind market">市場成交</span>';
+    const srcs=(r.sources||[]).map(s=>`<span class="src ${sourceClass(s)}">${s}</span>`).join("");
+    tr.innerHTML=`<td>${fmtDate(r.date)}</td><td>${unit}</td><td class="num">${fmtPrice(r.priceHKD)}</td>
+      <td class="num">${fmtArea(r.saleableAreaSqft)}</td><td class="num">${fmtRate(r.saleableHkdPerSqft)}</td>
+      <td>${kind}</td><td>${srcs}</td>`;
+    tb.appendChild(tr);
+  });
+}
+
+function render(){
+  renderCards();
+  renderTable();
+  const rows=filtered().length;
+  document.getElementById("meta").textContent=
+    `最後更新：${DATA.generatedAt}（香港時間）· 共 ${DATA.records.length} 宗記錄 · 現時顯示 ${rows} 宗`;
+  document.getElementById("footer").textContent=
+    `資料更新時間 ${DATA.generatedAt} · 屋苑 ${DATA.estates.length} 個 · 更新錯誤 ${(DATA.updateErrors||[]).length} 項`;
+}
+
+function boot(){
+  fetch("data/transactions.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+    DATA=d;
+    const ctl=document.getElementById("controls");
+    ctl.innerHTML=`
+      <select id="estateSel"><option value="all">全部屋苑</option></select>
+      <select id="kindSel"><option value="all">所有成交類型</option><option value="registry">註冊成交</option><option value="market">市場成交</option></select>
+      <select id="sourceSel"><option value="all">所有資料來源</option></select>
+      <input id="q" type="search" placeholder="搜尋單位／座數" />
+      <span id="sourceHealth" style="display:flex;gap:6px;flex-wrap:wrap"></span>`;
+    estateOptions();
+    const sourceSel=document.getElementById("sourceSel");
+    PROVIDERS.forEach(p=>{const o=document.createElement("option");o.value=p.label;o.textContent=p.label;sourceSel.appendChild(o);});
+    sourceHealth();
+    document.getElementById("estateSel").addEventListener("change",e=>{state.estate=e.target.value;render();});
+    document.getElementById("kindSel").addEventListener("change",e=>{state.kind=e.target.value;render();});
+    document.getElementById("sourceSel").addEventListener("change",e=>{state.source=e.target.value;render();});
+    document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value;render();});
+    document.getElementById("legend").innerHTML=
+      '<span><span class="kind registry">註冊成交</span> 土地註冊處</span><span><span class="kind market">市場成交</span> 代理／未登記</span>';
+    render();
+  }).catch(err=>{
+    document.getElementById("meta").textContent="資料載入失敗："+err.message;
+  });
+}
+boot();
+</script>
+</body>
+</html>
