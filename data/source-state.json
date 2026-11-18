@@ -1,12 +1,6 @@
 {
-  "lastSuccessAt": "2026-11-18T07:16:08+00:00",
+  "lastSuccessAt": "2026-11-18T07:20:43+00:00",
   "sources": {
-    "midland": {
-      "status": "failed",
-      "records": 0,
-      "latestDate": null,
-      "errors": []
-    },
     "centaline": {
       "status": "ok",
       "records": 971,
@@ -14,9 +8,15 @@
       "errors": []
     },
     "hse28": {
-      "status": "failed",
-      "records": 0,
-      "latestDate": null,
+      "status": "ok",
+      "records": 150,
+      "latestDate": "2026-11-16",
+      "errors": []
+    },
+    "midland": {
+      "status": "ok",
+      "records": 60,
+      "latestDate": "2026-11-15",
       "errors": []
     }
   }
