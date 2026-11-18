@@ -26,10 +26,30 @@ jobs:
           python-version: "3.11"
 
       - name: Update transaction data
-        run: python scripts/update_data.py
+        run: |
+          # GitHub's shared runner IPs are occasionally challenged by 28Hse
+          # and Midland. Retry until every provider returns records so a
+          # transient block cannot publish a dataset with missing sources.
+          for attempt in 1 2 3 4; do
+            echo "=== attempt $attempt ==="
+            python scripts/update_data.py || true
+            if python scripts/check_sources.py; then
+              echo "all sources returned records"
+              break
+            fi
+            echo "some sources returned 0; retrying in 30s"
+            sleep 30
+          done
 
       - name: Commit refreshed dataset
         run: |
+          # Only publish a dataset when every provider returned records;
+          # otherwise keep the previous complete dataset in place.
+          if ! python scripts/check_sources.py; then
+            echo "::warning::One or more sources returned 0 records; keeping previous dataset."
+            git checkout -- data/transactions.json data/source-state.json data/update-report.json
+            exit 0
+          fi
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/transactions.json data/update-report.json data/source-state.json

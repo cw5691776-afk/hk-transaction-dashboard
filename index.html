@@ -143,12 +143,17 @@ function sourceHealth(){
   el.innerHTML="";
   PROVIDERS.forEach(p=>{
     const s=(DATA.sources&&DATA.sources[p.id])||{status:"unknown"};
+    // Count how many merged records carry this provider, so the chip
+    // reflects what the page actually shows rather than a raw fetch tally.
+    let shown=0;
+    DATA.records.forEach(r=>{ if((r.sources||[]).includes(p.label)) shown++; });
     const chip=document.createElement("span");
     chip.className="chip";
     const dot=document.createElement("span");
-    dot.className="dot "+(s.status==="ok"?"ok":s.status==="failed"?"err":"warn");
+    const live=shown>0;
+    dot.className="dot "+(live?"ok":(s.status==="failed"?"err":"warn"));
     chip.appendChild(dot);
-    chip.appendChild(document.createTextNode(p.label+" "+(s.records??"0")+"宗"+(s.latestDate?" · 最新 "+s.latestDate:"")));
+    chip.appendChild(document.createTextNode(p.label+" "+shown+"宗"+(s.latestDate?" · 最新 "+s.latestDate:"")));
     el.appendChild(chip);
   });
 }
