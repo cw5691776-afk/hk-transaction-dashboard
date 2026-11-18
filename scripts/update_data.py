@@ -180,6 +180,25 @@ def normalize_unit(value: str | None) -> str | None:
     return value or None
 
 
+def normalize_phase(value: str | None) -> str | None:
+    """Normalise an estate phase label to a short form such as "1期".
+
+    Accepts the shapes each provider uses: "1期", "第1期", "第一期", "二期",
+    "3期 都會豪庭", and returns None when the text carries no phase.
+    """
+    if not value:
+        return None
+    text = normalize_text(value)
+    # "新都城 3期 都會豪庭 第三期 3座" -> take the first phase marker.
+    match = re.search(r"(?:第\s*)?([一二三四五六七八九十\d]+)\s*期", text)
+    if not match:
+        return None
+    token = match.group(1)
+    chinese = {"一": "1", "二": "2", "三": "3", "四": "4", "五": "5", "六": "6", "七": "7", "八": "8", "九": "9", "十": "10"}
+    number = chinese.get(token, token)
+    return f"{number}期"
+
+
 def normalize_date(value: str | None) -> str | None:
     if not value:
         return None
@@ -202,6 +221,7 @@ def record_key(record: dict[str, Any]) -> str:
     are kept separate from registry deals.
     """
     estate = normalize_text(record.get("estate") or "")
+    phase = record.get("phase") or ""
     block = normalize_unit(record.get("block")) or ""
     floor = normalize_unit(record.get("floor")) or ""
     unit = normalize_unit(record.get("unit")) or ""
@@ -209,12 +229,18 @@ def record_key(record: dict[str, Any]) -> str:
     price = record.get("priceHKD")
     area = record.get("saleableAreaSqft")
     if block or floor or unit:
-        return f"{estate}|{block}|{floor}|{unit}"
-    return f"{estate}|price={price}|area={area}"
+        return f"{estate}|{phase}|{block}|{floor}|{unit}"
+    return f"{estate}|{phase}|price={price}|area={area}"
 
 
 def same_unit(a: dict[str, Any], b: dict[str, Any]) -> bool:
     if normalize_text(a.get("estate") or "") != normalize_text(b.get("estate") or ""):
+        return False
+    # Estates with several phases (e.g. 新都城) reuse block numbers across
+    # phases, so the phase must agree before two records are the same unit.
+    a_phase = a.get("phase")
+    b_phase = b.get("phase")
+    if a_phase and b_phase and a_phase != b_phase:
         return False
     a_flat = normalize_unit(a.get("unit"))
     b_flat = normalize_unit(b.get("unit"))
@@ -332,7 +358,7 @@ def merge_provenance(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if target.get("priceHKD") and record.get("priceHKD"):
             if abs(target["priceHKD"] - record["priceHKD"]) >= max(50_000, target["priceHKD"] * 0.01):
                 target["hasDiscrepancy"] = True
-        for field in ("priceHKD", "saleableAreaSqft", "saleableHkdPerSqft", "grossAreaSqft", "block", "floor", "unit"):
+        for field in ("priceHKD", "saleableAreaSqft", "saleableHkdPerSqft", "grossAreaSqft", "block", "floor", "unit", "phase"):
             if target.get(field) in (None, "") and record.get(field) not in (None, ""):
                 target[field] = record[field]
         if not target.get("address") and record.get("address"):
@@ -374,6 +400,9 @@ def centaline_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
             if block_label and re.fullmatch(r"\d+", block_label):
                 block_label = None
             address_text = normalize_text(address)
+            # The phase marker ("2期") sits between the estate name and the
+            # block in Centaline's address string.
+            phase_label = normalize_phase(address_text)
             # Blocks can be lettered (C座) or numbered (2座, 10座).
             address_block = re.search(r"([A-Z0-9]{1,3})\s*座", address_text)
             if address_block:
@@ -418,6 +447,7 @@ def centaline_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
                     "estateId": estate["id"],
                     "estate": estate["name"],
                     "district": estate["district"],
+                    "phase": phase_label,
                     "date": normalize_date(item.get("insDate") or item.get("regDate")),
                     "block": block_label,
                     "floor": floor_label,
@@ -497,6 +527,8 @@ def _hse28_parse_page(page: str, estate: dict[str, Any], url: str) -> list[dict[
         if not address_match:
             address_match = re.search(r"([^0-9]{0,40}(?:樓|層)[^0-9]{0,12}(?:室|房))", text)
         address = normalize_text(address_match.group(1)) if address_match else None
+        # 28Hse prefixes the unit with the phase, e.g. "新都城 2期 第二期 2座 5樓 H室".
+        phase_label = normalize_phase(text)
         if not address:
             # The table's title attribute keeps the exact unit address.
             title_match = re.search(r'title="([^"]+)"', block)
@@ -526,6 +558,7 @@ def _hse28_parse_page(page: str, estate: dict[str, Any], url: str) -> list[dict[
                 "estateId": estate["id"],
                 "estate": estate["name"],
                 "district": estate["district"],
+                "phase": phase_label,
                 "date": date,
                 "block": block_name,
                 "floor": floor,
@@ -564,11 +597,14 @@ def midland_records(estate: dict[str, Any], token: str | None = None) -> list[di
         source = item.get("source") or item.get("original_source") or "MIDLAND"
         kind = "registry" if str(source).upper() in {"LANDREG", "LAND", "LR"} else "market"
         floor_name = item.get("floor") or (item.get("floor_level") or {}).get("name")
+        # Midland returns the phase as a structured object, e.g. {"name": "二期"}.
+        phase_label = normalize_phase((item.get("phase") or {}).get("name") if isinstance(item.get("phase"), dict) else item.get("phase"))
         records.append(
             {
                 "estateId": estate["id"],
                 "estate": estate["name"],
                 "district": estate["district"],
+                "phase": phase_label,
                 "date": normalize_date(item.get("tx_date")),
                 "block": normalize_unit((item.get("building") or {}).get("name")),
                 "floor": normalize_unit(floor_name),

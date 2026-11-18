@@ -30,6 +30,9 @@
   .estate dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px}
   .estate dt{color:var(--muted)} .estate dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
   .card-src{margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:4px}
+  .card-phase{margin-top:9px;display:flex;flex-wrap:wrap;gap:4px}
+  .card-phase .phase{margin-right:0}
+  .card-phase .phase b{font-weight:700;opacity:.85}
   .panel{border:1px solid var(--line);border-radius:10px;overflow:hidden}
   .panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:14px}
   .scroll{overflow-x:auto}
@@ -45,6 +48,8 @@
   .ecell{min-width:118px}
   .ename{display:block;font-weight:600}
   .edist{display:block;font-size:11.5px;color:var(--muted)}
+  .phase{display:inline-block;padding:1px 6px;margin-right:5px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:600;vertical-align:1px}
+  .edistname{margin-left:2px}
   .kind{font-size:11.5px;padding:2px 7px;border-radius:5px}
   .kind.registry{background:var(--accent-soft);color:var(--accent)}
   .kind.market{background:var(--warn-soft);color:var(--warn)}
@@ -103,7 +108,7 @@ const PROVIDERS = [
   {id:"midland", label:"美聯 Midland", cls:"midland"}
 ];
 let DATA = null;
-const state = {estate:"all", kind:"all", source:"all", q:""};
+const state = {estate:"all", phase:"all", kind:"all", source:"all", q:""};
 
 function fmtPrice(v){
   if(v==null) return "—";
@@ -136,6 +141,23 @@ function estateOptions(){
   DATA.estates.forEach(e=>{
     const o=document.createElement("option"); o.value=e.id; o.textContent=e.name+"（"+e.district+"）"; sel.appendChild(o);
   });
+}
+
+function phaseOptions(){
+  const sel=document.getElementById("phaseSel");
+  const keep=state.phase;
+  sel.innerHTML="";
+  const all=document.createElement("option"); all.value="all"; all.textContent="所有期數"; sel.appendChild(all);
+  // Phases only exist for multi-phase estates; hide the filter otherwise.
+  const phases=[...new Set(DATA.records.filter(r=>
+    (state.estate==="all" || r.estateId===state.estate) && r.phase
+  ).map(r=>r.phase))].sort((a,b)=>parseInt(a)-parseInt(b));
+  sel.hidden=phases.length<2;
+  phases.forEach(p=>{
+    const o=document.createElement("option"); o.value=p; o.textContent=p; sel.appendChild(o);
+  });
+  state.phase=(phases.includes(keep)&&keep!=="all")?keep:"all";
+  sel.value=state.phase;
 }
 
 function sourceHealth(){
@@ -178,6 +200,13 @@ function renderCards(){
       const cls=sourceClass(s);
       return `<span class="src ${cls}" title="${s} · ${perSource[s].count}宗">${shortProvider(s)} ${perSource[s].date}</span>`;
     }).join("");
+    // Phase breakdown, only for estates that actually have phases.
+    const phaseCounts={};
+    rows.forEach(r=>{ if(r.phase) phaseCounts[r.phase]=(phaseCounts[r.phase]||0)+1; });
+    const phaseList=Object.keys(phaseCounts).sort((a,b)=>parseInt(a)-parseInt(b));
+    const phaseBadges=phaseList.length>1
+      ? `<div class="card-phase">${phaseList.map(p=>`<span class="phase">${p} <b>${phaseCounts[p]}</b></span>`).join("")}</div>`
+      : "";
     const div=document.createElement("div");
     div.className="estate";
     div.innerHTML=`<h2>${e.name}</h2><div class="dist">${e.district} · ${rows.length}宗記錄</div>
@@ -186,6 +215,7 @@ function renderCards(){
         <dt>成交日期</dt><dd>${latest?latest.date:"—"}</dd>
         <dt>平均實用呎價</dt><dd>${avg?fmtRate(avg):"—"}</dd>
       </dl>
+      ${phaseBadges}
       <div class="card-src">${srcBadges}</div>`;
     div.style.cursor="pointer";
     div.addEventListener("click",()=>{state.estate=e.id;document.getElementById("estateSel").value=e.id;render();});
@@ -197,10 +227,11 @@ function filtered(){
   const q=state.q.trim().toLowerCase();
   return DATA.records.filter(r=>{
     if(state.estate!=="all" && r.estateId!==state.estate) return false;
+    if(state.phase!=="all" && (r.phase||"")!==state.phase) return false;
     if(state.kind!=="all" && r.transactionKind!==state.kind) return false;
     if(state.source!=="all" && !(r.sources||[]).some(s=>s===state.source)) return false;
     if(q){
-      const hay=[r.estate,r.address,r.block,r.floor,r.unit].filter(Boolean).join(" ").toLowerCase();
+      const hay=[r.estate,r.phase,r.address,r.block,r.floor,r.unit].filter(Boolean).join(" ").toLowerCase();
       if(!hay.includes(q)) return false;
     }
     return true;
@@ -216,7 +247,8 @@ function renderTable(){
     const tr=document.createElement("tr");
     if(r.hasDiscrepancy) tr.className="warnrow";
     const unit=[r.block?r.block+"座":"",r.floor?r.floor+"樓":"",r.unit?r.unit+"室":""].filter(Boolean).join(" ")||(r.address||"—");
-    const estateCell=`<span class="ename">${r.estate||"—"}</span><span class="edist">${r.district||""}</span>`;
+    const phase=r.phase?`<span class="phase">${r.phase}</span>`:"";
+    const estateCell=`<span class="ename">${r.estate||"—"}</span><span class="edist">${phase}${r.district?`<span class="edistname">${r.district}</span>`:""}</span>`;
     const kind=r.transactionKind==="registry"?'<span class="kind registry">註冊成交</span>':'<span class="kind market">市場成交</span>';
     const srcs=(r.sources||[]).map(s=>`<span class="src ${sourceClass(s)}">${s}</span>`).join("");
     tr.innerHTML=`<td class="ecell">${estateCell}</td><td>${fmtDate(r.date)}</td><td>${unit}</td><td class="num">${fmtPrice(r.priceHKD)}</td>
@@ -242,15 +274,18 @@ function boot(){
     const ctl=document.getElementById("controls");
     ctl.innerHTML=`
       <select id="estateSel"><option value="all">全部屋苑</option></select>
+      <select id="phaseSel"><option value="all">所有期數</option></select>
       <select id="kindSel"><option value="all">所有成交類型</option><option value="registry">註冊成交</option><option value="market">市場成交</option></select>
       <select id="sourceSel"><option value="all">所有資料來源</option></select>
-      <input id="q" type="search" placeholder="搜尋單位／座數" />
+      <input id="q" type="search" placeholder="搜尋單位／座數／期數" />
       <span id="sourceHealth" style="display:flex;gap:6px;flex-wrap:wrap"></span>`;
     estateOptions();
+    phaseOptions();
     const sourceSel=document.getElementById("sourceSel");
     PROVIDERS.forEach(p=>{const o=document.createElement("option");o.value=p.label;o.textContent=p.label;sourceSel.appendChild(o);});
     sourceHealth();
-    document.getElementById("estateSel").addEventListener("change",e=>{state.estate=e.target.value;render();});
+    document.getElementById("estateSel").addEventListener("change",e=>{state.estate=e.target.value;phaseOptions();render();});
+    document.getElementById("phaseSel").addEventListener("change",e=>{state.phase=e.target.value;render();});
     document.getElementById("kindSel").addEventListener("change",e=>{state.kind=e.target.value;render();});
     document.getElementById("sourceSel").addEventListener("change",e=>{state.source=e.target.value;render();});
     document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value;render();});

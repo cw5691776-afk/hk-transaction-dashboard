@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-18T07:20:43+00:00",
+  "generatedAt": "2026-11-18T08:09:13+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -110,7 +110,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -136,7 +137,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -249,7 +251,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -423,7 +426,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -455,7 +459,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -481,7 +486,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "美聯 Midland"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -507,7 +513,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -571,7 +578,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -603,7 +611,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -635,7 +644,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -667,7 +677,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -757,7 +768,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -815,7 +827,8 @@
         "28Hse",
         "美聯 Midland",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -841,7 +854,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "美聯 Midland"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -934,7 +948,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -961,7 +976,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -990,7 +1006,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -1133,7 +1150,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -1162,7 +1180,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -1316,7 +1335,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -1461,7 +1481,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -1490,7 +1511,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -1551,7 +1573,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -1609,7 +1632,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -1638,7 +1662,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -1667,7 +1692,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -1696,7 +1722,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -1920,7 +1947,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -1949,7 +1977,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -2120,7 +2149,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -2207,7 +2237,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -2236,7 +2267,8 @@
       "sources": [
         "28Hse",
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -2347,7 +2379,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -2435,7 +2468,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -2517,7 +2551,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "the-holborn",
@@ -2659,7 +2694,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -2828,7 +2864,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -2855,7 +2892,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -2882,7 +2920,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -2909,7 +2948,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -2994,7 +3034,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -3111,7 +3152,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -3199,7 +3241,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -3252,7 +3295,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "the-holborn",
@@ -3372,7 +3416,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -3399,7 +3444,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -3426,7 +3472,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -3453,7 +3500,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -3480,7 +3528,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -3507,7 +3556,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -3563,7 +3613,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "the-holborn",
@@ -3674,7 +3725,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -3701,7 +3753,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -3878,7 +3931,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -3905,7 +3959,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -3932,7 +3987,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -3959,7 +4015,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -3986,7 +4043,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -4013,7 +4071,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -4040,7 +4099,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -4148,7 +4208,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -4175,7 +4236,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -4202,7 +4264,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -4229,7 +4292,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -4256,7 +4320,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -4283,7 +4348,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -4310,7 +4376,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -4391,7 +4458,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -4444,7 +4512,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -4524,7 +4593,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -4578,7 +4648,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -4605,7 +4676,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -4712,7 +4784,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -4765,7 +4838,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -4819,7 +4893,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -4926,7 +5001,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -4953,7 +5029,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -5175,7 +5252,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -5202,7 +5280,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -5309,7 +5388,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -5417,7 +5497,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -5496,7 +5577,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -5631,7 +5713,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -5793,7 +5876,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -5849,7 +5933,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -5902,7 +5987,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -5929,7 +6015,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -5956,7 +6043,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -6092,7 +6180,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -6172,7 +6261,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -6284,7 +6374,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -6418,7 +6509,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -6445,7 +6537,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -6472,7 +6565,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -6499,7 +6593,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -6606,7 +6701,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -6772,7 +6868,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -6799,7 +6896,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -6826,7 +6924,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -6880,7 +6979,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -6907,7 +7007,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -6988,7 +7089,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -7015,7 +7117,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -7096,7 +7199,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7150,7 +7254,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -7177,7 +7282,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7258,7 +7364,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -7314,7 +7421,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7368,7 +7476,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7502,7 +7611,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -7529,7 +7639,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -7609,7 +7720,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -7636,7 +7748,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7717,7 +7830,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -7798,7 +7912,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -7909,7 +8024,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -7936,7 +8052,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -8046,7 +8163,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -8099,7 +8217,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8126,7 +8245,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -8208,7 +8328,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8235,7 +8356,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -8288,7 +8410,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8315,7 +8438,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -8342,7 +8466,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8369,7 +8494,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8396,7 +8522,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -8533,7 +8660,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -8589,7 +8717,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -8674,7 +8803,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -8701,7 +8831,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -8838,7 +8969,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8865,7 +8997,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -8892,7 +9025,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -8919,7 +9053,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8946,7 +9081,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -8973,7 +9109,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -9027,7 +9164,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -9134,7 +9272,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -9190,7 +9329,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -9217,7 +9357,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -9354,7 +9495,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -9436,7 +9578,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -9573,7 +9716,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -9707,7 +9851,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -9734,7 +9879,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -9761,7 +9907,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10003,7 +10150,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10030,7 +10178,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10057,7 +10206,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10084,7 +10234,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -10111,7 +10262,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10138,7 +10290,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10246,7 +10399,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10273,7 +10427,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10300,7 +10455,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -10327,7 +10483,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10354,7 +10511,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10381,7 +10539,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10435,7 +10594,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10515,7 +10675,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10542,7 +10703,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -10569,7 +10731,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -10677,7 +10840,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10731,7 +10895,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -10758,7 +10923,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -10785,7 +10951,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -10812,7 +10979,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -10947,7 +11115,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -11000,7 +11169,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -11054,7 +11224,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -11081,7 +11252,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11108,7 +11280,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11135,7 +11308,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11162,7 +11336,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11189,7 +11364,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -11323,7 +11499,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11350,7 +11527,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11377,7 +11555,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11404,7 +11583,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -11431,7 +11611,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -11485,7 +11666,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -11512,7 +11694,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -11539,7 +11722,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11566,7 +11750,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -11620,7 +11805,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11647,7 +11833,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -11701,7 +11888,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11728,7 +11916,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11755,7 +11944,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11782,7 +11972,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -11916,7 +12107,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -11943,7 +12135,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -11997,7 +12190,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12024,7 +12218,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12051,7 +12246,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12078,7 +12274,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12105,7 +12302,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12132,7 +12330,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -12213,7 +12412,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12240,7 +12440,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -12267,7 +12468,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -12402,7 +12604,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -12509,7 +12712,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12536,7 +12740,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -12563,7 +12768,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -12590,7 +12796,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12617,7 +12824,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -12644,7 +12852,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -12671,7 +12880,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12698,7 +12908,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -12725,7 +12936,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -12752,7 +12964,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -12779,7 +12992,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -12833,7 +13047,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -12860,7 +13075,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -12995,7 +13211,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -13076,7 +13293,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -13130,7 +13348,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -13184,7 +13403,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -13238,7 +13458,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -13321,7 +13542,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -13402,7 +13624,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -13483,7 +13706,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -13537,7 +13761,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -13564,7 +13789,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -13591,7 +13817,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -13618,7 +13845,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -13645,7 +13873,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -13672,7 +13901,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -13699,7 +13929,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -13726,7 +13957,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -13834,7 +14066,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -13888,7 +14121,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -13915,7 +14149,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -13942,7 +14177,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -13996,7 +14232,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14023,7 +14260,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14050,7 +14288,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -14104,7 +14343,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14131,7 +14371,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -14158,7 +14399,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -14185,7 +14427,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14212,7 +14455,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14239,7 +14483,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14266,7 +14511,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -14293,7 +14539,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14320,7 +14567,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -14374,7 +14622,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -14428,7 +14677,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -14509,7 +14759,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -14536,7 +14787,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14563,7 +14815,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -14617,7 +14870,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -14644,7 +14898,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -14725,7 +14980,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -14752,7 +15008,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -14806,7 +15063,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -14860,7 +15118,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -14887,7 +15146,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -15022,7 +15282,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -15076,7 +15337,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -15103,7 +15365,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -15157,7 +15420,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -15184,7 +15448,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -15238,7 +15503,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -15265,7 +15531,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -15292,7 +15559,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -15346,7 +15614,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -15373,7 +15642,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -15456,7 +15726,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -15483,7 +15754,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -15510,7 +15782,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -15537,7 +15810,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -15618,7 +15892,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -15645,7 +15920,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -15672,7 +15948,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -15753,7 +16030,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -15780,7 +16058,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -15861,7 +16140,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -15998,7 +16278,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16025,7 +16306,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -16052,7 +16334,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -16106,7 +16389,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -16133,7 +16417,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -16270,7 +16555,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16297,7 +16583,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -16324,7 +16611,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16351,7 +16639,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -16378,7 +16667,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -16432,7 +16722,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -16459,7 +16750,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -16486,7 +16778,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -16567,7 +16860,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -16594,7 +16888,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -16675,7 +16970,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16702,7 +16998,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -16756,7 +17053,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16783,7 +17081,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -16864,7 +17163,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -16891,7 +17191,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -16945,7 +17246,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -16972,7 +17274,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -16999,7 +17302,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -17053,7 +17357,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17080,7 +17385,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17107,7 +17413,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17134,7 +17441,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17161,7 +17469,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -17215,7 +17524,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17242,7 +17552,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17269,7 +17580,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17296,7 +17608,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17323,7 +17636,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17350,7 +17664,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17377,7 +17692,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17404,7 +17720,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17431,7 +17748,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17458,7 +17776,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17485,7 +17804,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17512,7 +17832,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17539,7 +17860,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -17566,7 +17888,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17593,7 +17916,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17620,7 +17944,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17647,7 +17972,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17674,7 +18000,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -17728,7 +18055,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -17755,7 +18083,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -17782,7 +18111,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17809,7 +18139,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17836,7 +18167,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -17890,7 +18222,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -17917,7 +18250,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -18000,7 +18334,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18027,7 +18362,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18054,7 +18390,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -18081,7 +18418,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18108,7 +18446,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18135,7 +18474,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -18162,7 +18502,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18189,7 +18530,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -18216,7 +18558,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -18324,7 +18667,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18351,7 +18695,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -18378,7 +18723,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -18434,7 +18780,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -18542,7 +18889,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -18596,7 +18944,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18623,7 +18972,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18650,7 +19000,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -18731,7 +19082,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -18784,7 +19136,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18811,7 +19164,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -18865,7 +19219,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18892,7 +19247,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -18919,7 +19275,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -18973,7 +19330,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19000,7 +19358,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -19054,7 +19413,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19081,7 +19441,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19108,7 +19469,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19135,7 +19497,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19162,7 +19525,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -19216,7 +19580,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19243,7 +19608,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19270,7 +19636,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -19297,7 +19664,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19324,7 +19692,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19351,7 +19720,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19378,7 +19748,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19405,7 +19776,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19432,7 +19804,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -19459,7 +19832,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -19513,7 +19887,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -19594,7 +19969,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -19621,7 +19997,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19648,7 +20025,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19675,7 +20053,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -19728,7 +20107,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19755,7 +20135,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -19782,7 +20163,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19809,7 +20191,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19836,7 +20219,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -19863,7 +20247,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -19917,7 +20302,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -19944,7 +20330,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -20052,7 +20439,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -20079,7 +20467,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20106,7 +20495,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -20160,7 +20550,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20187,7 +20578,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -20268,7 +20660,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20295,7 +20688,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -20322,7 +20716,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -20349,7 +20744,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20376,7 +20772,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20403,7 +20800,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20430,7 +20828,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -20484,7 +20883,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -20538,7 +20938,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -20592,7 +20993,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -20646,7 +21048,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20673,7 +21076,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -20808,7 +21212,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -20862,7 +21267,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -20916,7 +21322,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -20943,7 +21350,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -20970,7 +21378,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -21024,7 +21433,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -21078,7 +21488,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -21105,7 +21516,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21132,7 +21544,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -21213,7 +21626,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -21320,7 +21734,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -21374,7 +21789,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -21428,7 +21844,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21455,7 +21872,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -21482,7 +21900,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21509,7 +21928,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -21563,7 +21983,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -21590,7 +22011,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21617,7 +22039,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -21673,7 +22096,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -21700,7 +22124,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21727,7 +22152,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "hong-wah-court",
@@ -21895,7 +22321,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -21922,7 +22349,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -21976,7 +22404,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -22084,7 +22513,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-town",
@@ -22138,7 +22568,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -22165,7 +22596,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -22192,7 +22624,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -22219,7 +22652,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -22354,7 +22788,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -22381,7 +22816,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -22408,7 +22844,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -22462,7 +22899,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -22489,7 +22927,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -22948,7 +23387,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -22975,7 +23415,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -23002,7 +23443,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -23029,7 +23471,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -23083,7 +23526,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -23110,7 +23554,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -23137,7 +23582,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -23164,7 +23610,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -23220,7 +23667,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -23247,7 +23695,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -23274,7 +23723,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -23301,7 +23751,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -23328,7 +23779,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -23409,7 +23861,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -24003,7 +24456,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -24030,7 +24484,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "the-holborn",
@@ -24219,7 +24674,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -24705,7 +25161,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -24732,7 +25189,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "the-holborn",
@@ -25191,7 +25649,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25218,7 +25677,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25245,7 +25705,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25272,7 +25733,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -25326,7 +25788,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -25353,7 +25816,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25380,7 +25844,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25407,7 +25872,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "hong-wah-court",
@@ -25488,7 +25954,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25515,7 +25982,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25542,7 +26010,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25569,7 +26038,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25596,7 +26066,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25623,7 +26094,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25650,7 +26122,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25677,7 +26150,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -25704,7 +26178,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25731,7 +26206,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -25785,7 +26261,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -25812,7 +26289,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -25839,7 +26317,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "sun-sing-centre",
@@ -25893,7 +26372,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -25920,7 +26400,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -25947,7 +26428,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-town",
@@ -26055,7 +26537,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26082,7 +26565,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26109,7 +26593,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26136,7 +26621,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26163,7 +26649,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-town",
@@ -26217,7 +26704,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "hong-wah-court",
@@ -26298,7 +26786,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -26325,7 +26814,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -26352,7 +26842,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -26379,7 +26870,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26406,7 +26898,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26433,7 +26926,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -26487,7 +26981,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     },
     {
       "estateId": "metro-city",
@@ -26514,7 +27009,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26541,7 +27037,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26568,7 +27065,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26595,7 +27093,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "3期"
     },
     {
       "estateId": "metro-city",
@@ -26622,7 +27121,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26649,7 +27149,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "tak-bo-garden",
@@ -26703,7 +27204,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "2期"
     },
     {
       "estateId": "metro-city",
@@ -26730,7 +27232,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "中原 Centadata"
-      ]
+      ],
+      "phase": "1期"
     }
   ],
   "estateCounts": {
