@@ -1,12 +1,13 @@
 # Hong Kong Estate Transaction Dashboard
 
-A zero-token, self-updating dashboard for recent residential sale transactions in five Hong Kong estates:
+A zero-token, self-updating dashboard for recent residential sale transactions in six Hong Kong estates:
 
 - 得寶花園 (Tak Bo Garden, 九龍灣)
 - 康華苑 (Hong Wah Court, 藍田)
 - 新成中心 (Sun Sing Centre, 西灣河)
 - The Holborn (西灣河)
 - 都會軒 (Metro Town, 紅磡)
+- 新都城 (Metro City, 將軍澳)
 
 ## Data sources
 

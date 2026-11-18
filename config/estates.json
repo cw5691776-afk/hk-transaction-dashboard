@@ -99,6 +99,51 @@
       }
     },
     {
+      "id": "metro-city",
+      "name": "新都城",
+      "aliases": [
+        "新都城",
+        "Metro City",
+        "都會豪庭"
+      ],
+      "district": "將軍澳",
+      "centaline": {
+        "type_codes": [
+          "1-GDGYWPDJPA",
+          "1-GDGYWPDAPA",
+          "1-GDGYWPDRPA",
+          "1-GDGYWPDSPA",
+          "1-GDDYWPDXPA",
+          "1-GDDYWPDJPA",
+          "1-YAPPWPPEPG",
+          "1-YAPPWSPEPG",
+          "1-YAPPWEPEPG",
+          "1-YAPPWAPEPG",
+          "1-YAPPWKPEPG",
+          "1-YAPPWBPEPG",
+          "1-YAPPWGPEPG",
+          "1-YAPPWDPEPG",
+          "1-YAPPWYPEPG",
+          "1-YAPPWWPEPG",
+          "1-YAPPWPPJPG",
+          "1-YAPPWSPXPG",
+          "1-YAPPWEPXPG",
+          "1-YAPPWKPXPG",
+          "1-YAPPWAPXPG"
+        ]
+      },
+      "hse28": {
+        "estate_id": "4000"
+      },
+      "midland": {
+        "estate_id": "E00142",
+        "estate_names": [
+          "新都城",
+          "Metro City"
+        ]
+      }
+    },
+    {
       "id": "metro-town",
       "name": "都會軒",
       "aliases": [

@@ -374,9 +374,10 @@ def centaline_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
             if block_label and re.fullmatch(r"\d+", block_label):
                 block_label = None
             address_text = normalize_text(address)
-            address_block = re.search(r"([A-Z])\s*座", address_text)
+            # Blocks can be lettered (C座) or numbered (2座, 10座).
+            address_block = re.search(r"([A-Z0-9]{1,3})\s*座", address_text)
             if address_block:
-                block_label = address_block.group(1)
+                block_label = address_block.group(1).upper()
             address_floor = re.search(r"([0-9]{1,2})\s*(?:樓|层)", address_text)
             if address_floor:
                 floor_label = address_floor.group(1)
@@ -390,12 +391,20 @@ def centaline_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
             address_flat = re.search(r"([A-Z]?[0-9]{1,3})\s*(?:室|房)", address_text)
             if address_flat:
                 unit_label = address_flat.group(1).upper()
+            # Strip the Chinese unit suffix so every provider stores a bare
+            # flat label ("F", "A4") and can be compared across sources.
+            if unit_label:
+                unit_label = re.sub(r"\s*(?:室|房)\s*$", "", unit_label).strip() or None
+            # Car parks and non-residential units (e.g. "車位 地庫2 RC483號")
+            # are not comparable residential sales.
+            if "車位" in address_text or "地庫" in address_text or "RC" in address_text.upper():
+                continue
             # Centaline's address string repeats the estate name and may
             # include a phase prefix ("2期"). Keep only the physical unit.
             address_clean = re.sub(
-                r"^(?:得寶花園|康華苑|新成中心|The\s*Holborn|都會軒)\s*", "", address_text, flags=re.I
+                r"^(?:得寶花園|康華苑|新成中心|The\s*Holborn|都會軒|新都城)\s*", "", address_text, flags=re.I
             )
-            address_clean = re.sub(r"^[0-9]+期\s*", "", address_clean)
+            address_clean = re.sub(r"^(?:第?[一二三123]期|三期\s*都會豪庭|都會豪庭)\s*", "", address_clean)
             if floor_label is None:
                 # Centaline's building-name field carries the phase/building
                 # code rather than the physical block, so keep it out of the
@@ -430,15 +439,34 @@ def centaline_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
     return records
 
 
-def hse28_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
+def hse28_records(estate: dict[str, Any], max_pages: int = 4) -> list[dict[str, Any]]:
     estate_id = estate.get("hse28", {}).get("estate_id")
     if not estate_id:
         return []
-    url = f"{HSE28_BASE}/{urllib.parse.quote(estate['name'])}-{estate_id}/transaction"
-    page = safe_get_text(url)
+    slug = f"{urllib.parse.quote(estate['name'])}-{estate_id}"
+    url = f"{HSE28_BASE}/{slug}/transaction"
+    records: list[dict[str, Any]] = []
+    seen_units: set[str] = set()
+    # 28Hse paginates the transaction table; walk a bounded number of pages.
+    pages: list[str] = []
+    for page_number in range(1, max_pages + 1):
+        page_url = url if page_number == 1 else f"{url}/page-{page_number}"
+        try:
+            pages.append(safe_get_text(page_url))
+        except Exception:
+            break
+        time.sleep(0.5)
+    for page in pages:
+        records.extend(_hse28_parse_page(page, estate, url))
+    return records
+
+
+def _hse28_parse_page(page: str, estate: dict[str, Any], url: str) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     # 28Hse renders each deal as a table row with unit-id.
     row_pattern = re.compile(r"<tr\s+unit-id=\"(\d+)\">(.*?)</tr>", re.S)
+    # Estate names differ per estate, so build the prefix pattern from config.
+    estate_prefix = "|".join(re.escape(alias) for alias in estate["aliases"]) or re.escape(estate["name"])
     for row_match in row_pattern.finditer(page):
         unit_id = row_match.group(1)
         block = row_match.group(2)
@@ -454,10 +482,18 @@ def hse28_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
         area_match = re.search(r"(實|建)\s*([0-9]+)\s*呎", text)
         unit_price_match = re.search(r"@\s*\$?\s*([0-9,]+)", text)
         address_match = re.search(
-            r"(?:得寶花園|康華苑|新成中心|The\s*Holborn|都會軒)\s*([^0-9]{0,40}(?:樓|層|座)[^0-9]{0,12}(?:室|房))",
+            rf"(?:{estate_prefix})\s*([^0-9]{{0,40}}(?:樓|層|座)[^0-9]{{0,12}}(?:室|房))",
             text,
             re.I,
         )
+        if not address_match:
+            # Addresses can read "2座 5樓 H室" (block before floor) or
+            # "5樓 H室" (no block). Capture the whole unit descriptor.
+            address_match = re.search(
+                r"((?:[0-9A-Z]{1,3}\s*座\s*)?[0-9]{1,3}\s*(?:樓|層)\s*[A-Z]?[0-9]{0,3}\s*(?:室|房))",
+                text,
+                re.I,
+            )
         if not address_match:
             address_match = re.search(r"([^0-9]{0,40}(?:樓|層)[^0-9]{0,12}(?:室|房))", text)
         address = normalize_text(address_match.group(1)) if address_match else None
@@ -466,17 +502,24 @@ def hse28_records(estate: dict[str, Any]) -> list[dict[str, Any]]:
             title_match = re.search(r'title="([^"]+)"', block)
             if title_match:
                 address = normalize_text(title_match.group(1))
-                address = re.sub(r"^(?:得寶花園|康華苑|新成中心|The\s*Holborn|都會軒)\s*", "", address, flags=re.I)
+                address = re.sub(rf"^(?:{estate_prefix})\s*", "", address, flags=re.I)
+                address = re.sub(r"^(?:第?[一二三123]期|三期\s*都會豪庭|都會豪庭)\s*", "", address)
         block_name = None
         floor = None
         unit = None
         if address:
-            block_match = re.search(r"(?:第)?([A-Z])\s*座", address, re.I)
+            # Blocks can be lettered (C座) or numbered (2座, 10座).
+            block_match = re.search(r"(?:第)?([A-Z0-9]{1,3})\s*座", address, re.I)
             floor_match = re.search(r"([0-9]{1,2})\s*(?:樓|層)", address)
-            unit_match = re.search(r"([A-Z]?[0-9]{1,3})\s*(?:室|房)", address, re.I)
-            block_name = block_match.group(1).upper() if block_match else None
-            floor = floor_match.group(1) if floor_match else None
-            unit = unit_match.group(1).upper() if unit_match else None
+            unit_match = re.search(r"([A-Z]?[0-9]{0,3})\s*(?:室|房)", address, re.I)
+            if block_match:
+                block_name = block_match.group(1).upper()
+            if floor_match:
+                floor = floor_match.group(1)
+            if unit_match:
+                unit = unit_match.group(1).upper() or None
+            if unit:
+                unit = re.sub(r"\s*(?:室|房)\s*$", "", unit).strip() or None
         detail_url_match = re.search(r'href="([^"]*/(?:history|transaction)[^"]*)"', block)
         records.append(
             {

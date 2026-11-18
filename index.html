@@ -29,6 +29,7 @@
   .estate .dist{color:var(--muted);font-size:12px;margin-bottom:9px}
   .estate dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px}
   .estate dt{color:var(--muted)} .estate dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+  .card-src{margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:4px}
   .panel{border:1px solid var(--line);border-radius:10px;overflow:hidden}
   .panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:14px}
   .scroll{overflow-x:auto}
@@ -41,6 +42,9 @@
   .src.centaline{border-color:#b9d8d1;background:#f2f9f7}
   .src.hse{border-color:#c9d6ea;background:#f3f7fc}
   .src.midland{border-color:#e5d1bd;background:#fdf7f0}
+  .ecell{min-width:118px}
+  .ename{display:block;font-weight:600}
+  .edist{display:block;font-size:11.5px;color:var(--muted)}
   .kind{font-size:11.5px;padding:2px 7px;border-radius:5px}
   .kind.registry{background:var(--accent-soft);color:var(--accent)}
   .kind.market{background:var(--warn-soft);color:var(--warn)}
@@ -75,7 +79,7 @@
       <table id="table">
         <thead>
           <tr>
-            <th>成交日期</th><th>單位</th><th class="num">成交價</th><th class="num">實用面積</th>
+            <th>屋苑</th><th>成交日期</th><th>單位</th><th class="num">成交價</th><th class="num">實用面積</th>
             <th class="num">實用呎價</th><th>類型</th><th>資料來源</th>
           </tr>
         </thead>
@@ -86,7 +90,8 @@
   </div>
   <p class="note">
     資料來自中原 Centadata、28Hse、美聯 Midland 公開成交頁面；多數成交源自土地註冊處資料，頁面已盡量合併同一宗成交並保留所有來源標籤。
-    「市場成交」指尚未登記或代理成交，「註冊成交」指土地註冊處成交。資料只供參考。
+    「市場成交」指尚未登記或代理成交，「註冊成交」指土地註冊處成交。車位及非住宅單位已排除。
+    資料只供參考。
   </p>
 </main>
 <footer><div class="wrap" id="footer"></div></footer>
@@ -119,6 +124,12 @@ function sourceClass(src){
   if(src.includes("28Hse")) return "hse";
   return "midland";
 }
+function shortProvider(src){
+  if(src.includes("中原")) return "中原";
+  if(src.includes("28Hse")) return "28Hse";
+  if(src.includes("美聯")) return "美聯";
+  return src;
+}
 
 function estateOptions(){
   const sel = document.getElementById("estateSel");
@@ -150,6 +161,18 @@ function renderCards(){
     const latest=rows.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""))[0];
     const rates=rows.filter(r=>r.saleableHkdPerSqft).map(r=>r.saleableHkdPerSqft);
     const avg=rates.length?Math.round(rates.reduce((a,b)=>a+b,0)/rates.length):null;
+    // Which providers contributed to this estate, with their own latest date.
+    const perSource={};
+    rows.forEach(r=>{
+      (r.sources||[]).forEach(s=>{
+        if(!perSource[s] || (r.date||"")>perSource[s].date) perSource[s]={date:r.date||"—",count:0};
+        perSource[s].count++;
+      });
+    });
+    const srcBadges=Object.keys(perSource).map(s=>{
+      const cls=sourceClass(s);
+      return `<span class="src ${cls}" title="${s} · ${perSource[s].count}宗">${shortProvider(s)} ${perSource[s].date}</span>`;
+    }).join("");
     const div=document.createElement("div");
     div.className="estate";
     div.innerHTML=`<h2>${e.name}</h2><div class="dist">${e.district} · ${rows.length}宗記錄</div>
@@ -157,7 +180,8 @@ function renderCards(){
         <dt>最新成交</dt><dd>${latest?fmtPrice(latest.priceHKD):"—"}</dd>
         <dt>成交日期</dt><dd>${latest?latest.date:"—"}</dd>
         <dt>平均實用呎價</dt><dd>${avg?fmtRate(avg):"—"}</dd>
-      </dl>`;
+      </dl>
+      <div class="card-src">${srcBadges}</div>`;
     div.style.cursor="pointer";
     div.addEventListener("click",()=>{state.estate=e.id;document.getElementById("estateSel").value=e.id;render();});
     wrap.appendChild(div);
@@ -187,9 +211,10 @@ function renderTable(){
     const tr=document.createElement("tr");
     if(r.hasDiscrepancy) tr.className="warnrow";
     const unit=[r.block?r.block+"座":"",r.floor?r.floor+"樓":"",r.unit?r.unit+"室":""].filter(Boolean).join(" ")||(r.address||"—");
+    const estateCell=`<span class="ename">${r.estate||"—"}</span><span class="edist">${r.district||""}</span>`;
     const kind=r.transactionKind==="registry"?'<span class="kind registry">註冊成交</span>':'<span class="kind market">市場成交</span>';
     const srcs=(r.sources||[]).map(s=>`<span class="src ${sourceClass(s)}">${s}</span>`).join("");
-    tr.innerHTML=`<td>${fmtDate(r.date)}</td><td>${unit}</td><td class="num">${fmtPrice(r.priceHKD)}</td>
+    tr.innerHTML=`<td class="ecell">${estateCell}</td><td>${fmtDate(r.date)}</td><td>${unit}</td><td class="num">${fmtPrice(r.priceHKD)}</td>
       <td class="num">${fmtArea(r.saleableAreaSqft)}</td><td class="num">${fmtRate(r.saleableHkdPerSqft)}</td>
       <td>${kind}</td><td>${srcs}</td>`;
     tb.appendChild(tr);
