@@ -52,7 +52,10 @@
   .fp-modal[hidden]{display:none}
   .fp-modal img{max-width:94vw;max-height:88vh;background:#fff;border-radius:8px;object-fit:contain}
   .fp-modal .fp-close{position:absolute;top:16px;right:20px;color:#fff;font-size:30px;line-height:1;background:none;border:none;cursor:pointer}
-  .panel{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .jump{display:flex;gap:8px;flex-wrap:wrap;margin:9px 0 11px}
+  .jump a{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent);border-radius:7px;padding:5px 12px;text-decoration:none}
+  .jump a:hover{background:var(--accent);color:#fff}
+  .panel{scroll-margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
   .panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:14px}
   .scroll{overflow-x:auto}
   table{width:100%;border-collapse:collapse;font-size:13.5px}
@@ -89,12 +92,27 @@
   <div class="wrap">
     <h1>屋苑成交資訊對比</h1>
     <div class="sub" id="meta">載入中…</div>
+    <nav class="jump">
+      <a href="#fpPanel">屋苑平面圖</a>
+      <a href="#tablePanel">成交記錄</a>
+    </nav>
     <div class="bar" id="controls"></div>
   </div>
 </header>
 <main class="wrap">
   <div class="cards" id="estateCards"></div>
-  <div class="panel">
+
+  <div class="panel" id="fpPanel">
+    <div class="panel-head">
+      <strong>屋苑平面圖</strong>
+      <span class="legend" id="fpMeta"></span>
+    </div>
+    <div class="fp-bar" id="fpControls"></div>
+    <div class="fp-grid" id="fpGrid"></div>
+    <div class="empty" id="fpEmpty" hidden>未有平面圖</div>
+  </div>
+
+  <div class="panel" id="tablePanel">
     <div class="panel-head">
       <strong>成交記錄</strong>
       <span class="legend" id="legend"></span>
@@ -111,16 +129,6 @@
       </table>
     </div>
     <div class="empty" id="empty" hidden>未有符合條件嘅成交記錄</div>
-  </div>
-
-  <div class="panel" id="fpPanel">
-    <div class="panel-head">
-      <strong>屋苑平面圖</strong>
-      <span class="legend" id="fpMeta"></span>
-    </div>
-    <div class="fp-bar" id="fpControls"></div>
-    <div class="fp-grid" id="fpGrid"></div>
-    <div class="empty" id="fpEmpty" hidden>未有平面圖</div>
   </div>
   <p class="note">
     資料來自中原 Centadata、28Hse、美聯 Midland 公開成交頁面；多數成交源自土地註冊處資料，頁面已盡量合併同一宗成交並保留所有來源標籤。
@@ -356,14 +364,25 @@ function fpControls(){
   if(phases.length){
     const phaseSel=mk("期數","fpPhaseSel",[{value:"all",text:"所有期數"}].concat(phases.map(p=>({value:p,text:p}))));
     phaseSel.value=state.fpPhase;
-    phaseSel.addEventListener("change",e=>{state.fpPhase=e.target.value;state.fpBlock="all";fpControls();renderFloorPlans();});
+    phaseSel.addEventListener("change",e=>{
+      state.fpPhase=e.target.value||"all";
+      if(state.fpPhase!==e.target.value) e.target.value="all";
+      state.fpBlock="all";
+      fpControls(); renderFloorPlans();
+    });
   }
   const scoped=state.fpPhase==="all"?scope:scope.filter(p=>(p.phase||"")===state.fpPhase);
   const blocks=[...new Set(scoped.map(p=>p.block).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   if(blocks.length){
     const blockSel=mk("座","fpBlockSel",[{value:"all",text:"所有座"}].concat(blocks.map(b=>({value:b,text:b+"座"}))));
     blockSel.value=state.fpBlock;
-    blockSel.addEventListener("change",e=>{state.fpBlock=e.target.value;renderFloorPlans();});
+    blockSel.addEventListener("change",e=>{
+      // An unmatched value (e.g. a stale selection) would filter everything
+      // out with no way back, so fall back to "all".
+      state.fpBlock=e.target.value||"all";
+      if(state.fpBlock!==e.target.value) e.target.value="all";
+      renderFloorPlans();
+    });
   }
 }
 
@@ -379,10 +398,16 @@ function renderFloorPlans(){
   rows.forEach(p=>{
     const card=document.createElement("div");
     card.className="fp-card";
-    const sub=[p.phase||"",p.block?p.block+"座":"",p.floorDesc||""].filter(Boolean).join(" · ");
+    // The title already carries block + floor ("A座 6/F-10/F"), so only add
+    // the sub-line when it says something the title does not.
+    const bits=[];
+    if(p.phase) bits.push(p.phase);
+    if(p.block && !p.title.includes(p.block)) bits.push(p.block+"座");
+    const sub=bits.join(" · ");
+    const subHtml=sub?`<span class="fp-sub">${sub}</span>`:"";
     card.innerHTML=`<img class="fp-thumb" loading="lazy" src="${p.thumbnailUrl||p.imageUrl}" alt="${p.title||"平面圖"}">
       <div class="fp-info"><span class="fp-title">${p.title||"平面圖"}</span>
-      <span class="fp-sub">${sub}</span>
+      ${subHtml}
       <span class="fp-src">來源：${p.provider}</span></div>`;
     const img=card.querySelector(".fp-thumb");
     img.addEventListener("click",()=>openModal(p));
