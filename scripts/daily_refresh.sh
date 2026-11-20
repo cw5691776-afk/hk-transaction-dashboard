@@ -34,12 +34,29 @@ export GH_TOKEN="$PAT"
 log "--- daily refresh starting"
 
 # Pull remote changes first so a push never races the bot's commit.
-git fetch origin --quiet || { log "WARN: git fetch failed"; }
-if ! git rebase origin/main --quiet; then
-  log "WARN: rebase conflict, aborting rebase and resolving toward local data"
-  git rebase --abort
-  git reset --hard origin/main
-  git cherry-pick --allow-empty -x "$(git rev-list origin/main..HEAD | head -1)" 2>/dev/null || true
+git fetch origin --quiet || log "WARN: git fetch failed"
+
+# Stash any uncommitted work (code edits) so the rebase can proceed. Never
+# hard-reset: that would silently discard local edits.
+STASHED=0
+if [ -n "$(git status --porcelain)" ]; then
+  git stash push --include-untracked -m "daily-refresh-autostash" >> "$LOG_FILE" 2>&1 && STASHED=1
+  log "stashed local changes before rebase"
+fi
+
+if ! git rebase origin/main >> "$LOG_FILE" 2>&1; then
+  log "WARN: rebase conflict; aborting and keeping local commits"
+  git rebase --abort >> "$LOG_FILE" 2>&1 || true
+  # Resolve data-file conflicts toward the complete dataset rather than
+  # resetting the tree, so local code changes survive.
+  if git diff --quiet HEAD -- data/transactions.json 2>/dev/null; then
+    git reset --soft origin/main
+    log "reset --soft onto origin/main (local commits preserved)"
+  fi
+fi
+
+if [ "$STASHED" -eq 1 ]; then
+  git stash pop >> "$LOG_FILE" 2>&1 || log "WARN: could not restore stashed changes; they remain in 'git stash list'"
 fi
 
 # Run the updater with retries; providers occasionally time out.
