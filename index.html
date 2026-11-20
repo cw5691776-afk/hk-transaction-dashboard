@@ -50,8 +50,17 @@
   .fp-info .fp-src{color:var(--muted);font-size:11px;margin-top:3px;display:block}
   .fp-modal{position:fixed;inset:0;background:rgba(15,23,42,.82);display:flex;align-items:center;justify-content:center;z-index:50;padding:24px}
   .fp-modal[hidden]{display:none}
-  .fp-modal img{max-width:94vw;max-height:88vh;background:#fff;border-radius:8px;object-fit:contain}
-  .fp-modal .fp-close{position:absolute;top:16px;right:20px;color:#fff;font-size:30px;line-height:1;background:none;border:none;cursor:pointer}
+  .fp-modal-box{position:relative;background:#fff;border-radius:12px;max-width:min(1000px,94vw);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+  .fp-modal-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+  .fp-modal-head strong{font-size:16px}
+  .fp-modal-head span{font-size:12.5px;color:var(--muted)}
+  .fp-modal-grid{overflow-y:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;padding:16px}
+  .fp-modal-view{flex:1;overflow:auto;display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px}
+  .fp-modal-view[hidden]{display:none}
+  .fp-modal-view img{max-width:100%;background:#fff;object-fit:contain}
+  .fp-back{align-self:flex-start;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:7px;background:#fff;cursor:pointer}
+  .fp-modal .fp-close{position:absolute;top:8px;right:12px;color:var(--muted);font-size:28px;line-height:1;background:none;border:none;cursor:pointer;z-index:2}
+  .fp-modal .fp-close:hover{color:var(--accent)}
   .jump{display:flex;gap:8px;flex-wrap:wrap;margin:9px 0 11px}
   .jump a{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent);border-radius:7px;padding:5px 12px;text-decoration:none}
   .jump a:hover{background:var(--accent);color:#fff}
@@ -70,6 +79,9 @@
   .ecell{min-width:118px}
   .ename{display:block;font-weight:600}
   .edist{display:block;font-size:11.5px;color:var(--muted)}
+  .fpbtn{margin-top:4px;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent);border-radius:6px;padding:2px 8px;cursor:pointer;white-space:nowrap}
+  .fpbtn:hover{background:var(--accent);color:#fff}
+  .fpbtn[disabled]{opacity:.4;cursor:default;background:#f1f5f9;border-color:var(--line);color:var(--muted)}
   .phase{display:inline-block;padding:1px 6px;margin-right:5px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:600;vertical-align:1px}
   .edistname{margin-left:2px}
   .kind{font-size:11.5px;padding:2px 7px;border-radius:5px}
@@ -93,7 +105,7 @@
     <h1>屋苑成交資訊對比</h1>
     <div class="sub" id="meta">載入中…</div>
     <nav class="jump">
-      <a href="#fpPanel">屋苑平面圖</a>
+      <a href="#estateCards">屋苑</a>
       <a href="#tablePanel">成交記錄</a>
     </nav>
     <div class="bar" id="controls"></div>
@@ -101,16 +113,6 @@
 </header>
 <main class="wrap">
   <div class="cards" id="estateCards"></div>
-
-  <div class="panel" id="fpPanel">
-    <div class="panel-head">
-      <strong>屋苑平面圖</strong>
-      <span class="legend" id="fpMeta"></span>
-    </div>
-    <div class="fp-bar" id="fpControls"></div>
-    <div class="fp-grid" id="fpGrid"></div>
-    <div class="empty" id="fpEmpty" hidden>未有平面圖</div>
-  </div>
 
   <div class="panel" id="tablePanel">
     <div class="panel-head">
@@ -133,7 +135,7 @@
   <p class="note">
     資料來自中原 Centadata、28Hse、美聯 Midland 公開成交頁面；多數成交源自土地註冊處資料，頁面已盡量合併同一宗成交並保留所有來源標籤。
     「市場成交」指尚未登記或代理成交，「註冊成交」指土地註冊處成交。車位及非住宅單位已排除。
-    平面圖來自美聯 Midland 及 28Hse 公開圖則，點擊縮圖可查看全圖。
+    平面圖來自美聯 Midland 及 28Hse 公開圖則；按成交記錄屋苑名旁邊嘅「平面圖」按鈕即可查看。
     資料只供參考。
   </p>
 </main>
@@ -147,7 +149,7 @@ const PROVIDERS = [
 ];
 let DATA = null;
 let FLOORPLANS = null;
-const state = {estate:"all", phase:"all", kind:"all", source:"all", q:"", fpEstate:"all", fpPhase:"all", fpBlock:"all"};
+const state = {estate:"all", phase:"all", kind:"all", source:"all", q:""};
 
 function fmtPrice(v){
   if(v==null) return "—";
@@ -270,11 +272,7 @@ function renderCards(){
     const select=()=>{
       state.estate=(state.estate===e.id)?"all":e.id;
       document.getElementById("estateSel").value=state.estate;
-      // Keep the floor-plan panel in sync with the estate selection.
-      state.fpEstate=state.estate;
-      state.fpPhase="all"; state.fpBlock="all";
       phaseOptions();
-      if(FLOORPLANS){fpControls();renderFloorPlans();}
       render();
     };
     div.addEventListener("click",select);
@@ -300,6 +298,82 @@ function filtered(){
   });
 }
 
+function fpPlansFor(estateId,phase,block){
+  if(!FLOORPLANS) return [];
+  let plans=FLOORPLANS.plans.filter(p=>p.estateId===estateId);
+  // Narrow to the row's own block when we have one and it has drawings;
+  // otherwise fall back to the whole estate so the button always opens
+  // something useful.
+  if(block){
+    const sameBlock=plans.filter(p=>(p.block||"")===block);
+    if(sameBlock.length){
+      const withPhase=phase?sameBlock.filter(p=>(p.phase||"")===phase):sameBlock;
+      plans=withPhase.length?withPhase:sameBlock;
+      return plans;
+    }
+  }
+  if(phase){
+    const samePhase=plans.filter(p=>(p.phase||"")===phase);
+    if(samePhase.length) plans=samePhase;
+  }
+  return plans;
+}
+
+function openFpModal(estateId,phase,block){
+  const plans=fpPlansFor(estateId,phase,block);
+  let modal=document.getElementById("fpModal");
+  if(!modal){
+    modal=document.createElement("div");
+    modal.id="fpModal"; modal.className="fp-modal"; modal.hidden=true;
+    modal.innerHTML=`<div class="fp-modal-box">
+        <button class="fp-close" aria-label="關閉">&times;</button>
+        <div class="fp-modal-head"><strong id="fpModalTitle"></strong><span id="fpModalMeta"></span></div>
+        <div class="fp-modal-grid" id="fpModalGrid"></div>
+        <div class="fp-modal-view" id="fpModalView" hidden><img id="fpModalImg" alt="平面圖"><button class="fp-back">← 返回列表</button></div>
+      </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener("click",e=>{
+      if(e.target===modal||e.target.classList.contains("fp-close")) closeFpModal();
+      if(e.target.classList.contains("fp-back")){
+        document.getElementById("fpModalView").hidden=true;
+        document.getElementById("fpModalGrid").hidden=false;
+      }
+    });
+  }
+  const estate=(DATA&&DATA.estates||[]).find(e=>e.id===estateId);
+  const name=estate?estate.name:estateId;
+  document.getElementById("fpModalTitle").textContent=
+    `${name}${phase?" "+phase:""}${block?" "+block+"座":""} 平面圖`;
+  document.getElementById("fpModalMeta").textContent=plans.length?`${plans.length} 張`:"";
+  const grid=document.getElementById("fpModalGrid");
+  grid.innerHTML="";
+  if(!plans.length){
+    grid.innerHTML='<div class="empty">未有平面圖</div>';
+  }
+  plans.forEach(p=>{
+    const card=document.createElement("div");
+    card.className="fp-card";
+    card.innerHTML=`<img class="fp-thumb" loading="lazy" src="${p.thumbnailUrl||p.imageUrl}" alt="${p.title||"平面圖"}">
+      <div class="fp-info"><span class="fp-title">${p.title||"平面圖"}</span>
+      <span class="fp-src">來源：${p.provider}</span></div>`;
+    card.querySelector(".fp-thumb").addEventListener("click",()=>{
+      document.getElementById("fpModalImg").src=p.imageUrl;
+      document.getElementById("fpModalImg").alt=p.title||"平面圖";
+      document.getElementById("fpModalGrid").hidden=true;
+      document.getElementById("fpModalView").hidden=false;
+    });
+    grid.appendChild(card);
+  });
+  document.getElementById("fpModalView").hidden=true;
+  document.getElementById("fpModalGrid").hidden=false;
+  modal.hidden=false;
+}
+
+function closeFpModal(){
+  const modal=document.getElementById("fpModal");
+  if(modal) modal.hidden=true;
+}
+
 function renderTable(){
   const rows=filtered().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   const tb=document.getElementById("tbody");
@@ -310,7 +384,11 @@ function renderTable(){
     if(r.hasDiscrepancy) tr.className="warnrow";
     const unit=[r.block?r.block+"座":"",r.floor?r.floor+"樓":"",r.unit?r.unit+"室":""].filter(Boolean).join(" ")||(r.address||"—");
     const phase=r.phase?`<span class="phase">${r.phase}</span>`:"";
-    const estateCell=`<span class="ename">${r.estate||"—"}</span><span class="edist">${phase}${r.district?`<span class="edistname">${r.district}</span>`:""}</span>`;
+    // Floor-plan button: opens the drawings for this estate on demand.
+    // Matching is by estate + phase + block, so a row points straight at the
+    // drawing of the block it belongs to.
+    const fpBtn=`<button class="fpbtn" type="button" data-fp="${r.estateId||""}" data-phase="${r.phase||""}" data-block="${r.block||""}">平面圖</button>`;
+    const estateCell=`<span class="ename">${r.estate||"—"}</span><span class="edist">${phase}${r.district?`<span class="edistname">${r.district}</span>`:""}</span>${fpBtn}`;
     const kind=r.transactionKind==="registry"?'<span class="kind registry">註冊成交</span>':'<span class="kind market">市場成交</span>';
     const srcs=(r.sources||[]).map(s=>`<span class="src ${sourceClass(s)}">${s}</span>`).join("");
     tr.innerHTML=`<td class="ecell">${estateCell}</td><td>${fmtDate(r.date)}</td><td>${unit}</td><td class="num">${fmtPrice(r.priceHKD)}</td>
@@ -318,117 +396,15 @@ function renderTable(){
       <td>${kind}</td><td>${srcs}</td>`;
     tb.appendChild(tr);
   });
-}
-
-function fpFiltered(){
-  if(!FLOORPLANS) return [];
-  return FLOORPLANS.plans.filter(p=>{
-    if(state.fpEstate!=="all" && p.estateId!==state.fpEstate) return false;
-    if(state.fpPhase!=="all" && (p.phase||"")!==state.fpPhase) return false;
-    if(state.fpBlock!=="all" && (p.block||"")!==state.fpBlock) return false;
-    return true;
+  // One delegated listener for every row's floor-plan button.
+  tb.querySelectorAll(".fpbtn").forEach(btn=>{
+    btn.addEventListener("click",e=>{
+      e.stopPropagation();
+      openFpModal(btn.dataset.fp,btn.dataset.phase,btn.dataset.block);
+    });
   });
 }
 
-function fpControls(){
-  const bar=document.getElementById("fpControls");
-  bar.innerHTML="";
-  const mk=(label,id,options)=>{
-    const wrap=document.createElement("span");
-    const lab=document.createElement("label");
-    lab.textContent=label;
-    const sel=document.createElement("select");
-    sel.id=id;
-    options.forEach(o=>{
-      const opt=document.createElement("option");
-      opt.value=o.value; opt.textContent=o.text;
-      sel.appendChild(opt);
-    });
-    wrap.appendChild(lab); wrap.appendChild(sel);
-    bar.appendChild(wrap);
-    return sel;
-  };
-  const estates=[{value:"all",text:"全部屋苑"}].concat(
-    (DATA?DATA.estates:[]).map(e=>({value:e.id,text:e.name}))
-  );
-  const estateSel=mk("屋苑","fpEstateSel",estates);
-  estateSel.value=state.fpEstate;
-  estateSel.addEventListener("change",e=>{
-    state.fpEstate=e.target.value; state.fpPhase="all"; state.fpBlock="all";
-    fpControls(); renderFloorPlans();
-  });
-
-  const all=FLOORPLANS?FLOORPLANS.plans:[];
-  const scope=state.fpEstate==="all"?all:all.filter(p=>p.estateId===state.fpEstate);
-  const phases=[...new Set(scope.map(p=>p.phase).filter(Boolean))].sort((a,b)=>parseInt(a)-parseInt(b));
-  if(phases.length){
-    const phaseSel=mk("期數","fpPhaseSel",[{value:"all",text:"所有期數"}].concat(phases.map(p=>({value:p,text:p}))));
-    phaseSel.value=state.fpPhase;
-    phaseSel.addEventListener("change",e=>{
-      state.fpPhase=e.target.value||"all";
-      if(state.fpPhase!==e.target.value) e.target.value="all";
-      state.fpBlock="all";
-      fpControls(); renderFloorPlans();
-    });
-  }
-  const scoped=state.fpPhase==="all"?scope:scope.filter(p=>(p.phase||"")===state.fpPhase);
-  const blocks=[...new Set(scoped.map(p=>p.block).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
-  if(blocks.length){
-    const blockSel=mk("座","fpBlockSel",[{value:"all",text:"所有座"}].concat(blocks.map(b=>({value:b,text:b+"座"}))));
-    blockSel.value=state.fpBlock;
-    blockSel.addEventListener("change",e=>{
-      // An unmatched value (e.g. a stale selection) would filter everything
-      // out with no way back, so fall back to "all".
-      state.fpBlock=e.target.value||"all";
-      if(state.fpBlock!==e.target.value) e.target.value="all";
-      renderFloorPlans();
-    });
-  }
-}
-
-function renderFloorPlans(){
-  const grid=document.getElementById("fpGrid");
-  grid.innerHTML="";
-  const rows=fpFiltered();
-  document.getElementById("fpEmpty").hidden=rows.length>0;
-  const counts=FLOORPLANS?(FLOORPLANS.estateCounts||{}):{};
-  document.getElementById("fpMeta").innerHTML=
-    `共 ${rows.length} 張 · 全部 ${FLOORPLANS?FLOORPLANS.planCount:0} 張 · `+
-    Object.keys(counts).map(k=>`${k} ${counts[k]}`).join(" · ");
-  rows.forEach(p=>{
-    const card=document.createElement("div");
-    card.className="fp-card";
-    // The title already carries block + floor ("A座 6/F-10/F"), so only add
-    // the sub-line when it says something the title does not.
-    const bits=[];
-    if(p.phase) bits.push(p.phase);
-    if(p.block && !p.title.includes(p.block)) bits.push(p.block+"座");
-    const sub=bits.join(" · ");
-    const subHtml=sub?`<span class="fp-sub">${sub}</span>`:"";
-    card.innerHTML=`<img class="fp-thumb" loading="lazy" src="${p.thumbnailUrl||p.imageUrl}" alt="${p.title||"平面圖"}">
-      <div class="fp-info"><span class="fp-title">${p.title||"平面圖"}</span>
-      ${subHtml}
-      <span class="fp-src">來源：${p.provider}</span></div>`;
-    const img=card.querySelector(".fp-thumb");
-    img.addEventListener("click",()=>openModal(p));
-    img.addEventListener("error",()=>{img.style.opacity="0.25";img.alt="（圖片未能載入）";});
-    grid.appendChild(card);
-  });
-}
-
-function openModal(plan){
-  let modal=document.getElementById("fpModal");
-  if(!modal){
-    modal=document.createElement("div");
-    modal.id="fpModal"; modal.className="fp-modal"; modal.hidden=true;
-    modal.innerHTML=`<button class="fp-close" aria-label="關閉">&times;</button><img alt="平面圖">`;
-    document.body.appendChild(modal);
-    modal.addEventListener("click",e=>{if(e.target===modal||e.target.classList.contains("fp-close")) modal.hidden=true;});
-  }
-  modal.querySelector("img").src=plan.imageUrl;
-  modal.querySelector("img").alt=plan.title||"平面圖";
-  modal.hidden=false;
-}
 
 function render(){
   renderCards();
@@ -458,9 +434,7 @@ function boot(){
     sourceHealth();
     document.getElementById("estateSel").addEventListener("change",e=>{
       state.estate=e.target.value;
-      state.fpEstate=state.estate; state.fpPhase="all"; state.fpBlock="all";
       phaseOptions();
-      if(FLOORPLANS){fpControls();renderFloorPlans();}
       render();
     });
     document.getElementById("phaseSel").addEventListener("change",e=>{state.phase=e.target.value;render();});
@@ -474,11 +448,13 @@ function boot(){
     // the transaction table.
     fetch("data/floorplans.json",{cache:"no-store"})
       .then(r=>r.ok?r.json():Promise.reject(new Error("HTTP "+r.status)))
-      .then(fp=>{FLOORPLANS=fp;fpControls();renderFloorPlans();renderCards();})
+      .then(fp=>{FLOORPLANS=fp;renderCards();renderTable();})
       .catch(()=>{
-        document.getElementById("fpMeta").textContent="平面圖資料未能載入";
-        document.getElementById("fpEmpty").hidden=false;
-        document.getElementById("fpEmpty").textContent="平面圖資料未能載入";
+        // No floor-plan data: disable the row buttons rather than showing a
+        // button that opens an empty modal.
+        document.querySelectorAll(".fpbtn").forEach(b=>{
+          b.disabled=true; b.title="平面圖資料未能載入";
+        });
       });
   }).catch(err=>{
     document.getElementById("meta").textContent="資料載入失敗："+err.message;
