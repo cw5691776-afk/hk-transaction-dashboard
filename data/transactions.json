@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-18T08:09:13+00:00",
+  "generatedAt": "2026-11-20T06:46:59+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -62,24 +62,82 @@
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 971,
-      "latestDate": "2026-11-04",
+      "records": 972,
+      "latestDate": "2026-11-20",
       "errors": []
     },
     "hse28": {
       "status": "ok",
       "records": 150,
-      "latestDate": "2026-11-16",
+      "latestDate": "2026-11-19",
       "errors": []
     },
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-15",
+      "latestDate": "2026-11-18",
       "errors": []
     }
   },
   "records": [
+    {
+      "estateId": "metro-town",
+      "estate": "都會軒",
+      "district": "紅磡",
+      "phase": null,
+      "date": "2026-11-20",
+      "block": "2",
+      "floor": null,
+      "unit": "15",
+      "address": "2座 中層 15室",
+      "priceHKD": 9280000.0,
+      "saleableAreaSqft": 496,
+      "saleableHkdPerSqft": 18710,
+      "grossAreaSqft": 663,
+      "transactionKind": "market",
+      "source": "中原 Centadata",
+      "providerIds": [
+        "MW8202610S0320"
+      ],
+      "sourceUrls": [
+        "https://hk.centanet.com/findproperty/transaction-detail/都會軒_MW8202610S0320"
+      ],
+      "buildingCode": "2座",
+      "hasDiscrepancy": false,
+      "sources": [
+        "中原 Centadata"
+      ]
+    },
+    {
+      "estateId": "tak-bo-garden",
+      "estate": "得寶花園",
+      "district": "九龍灣",
+      "phase": null,
+      "date": "2026-11-19",
+      "block": "F",
+      "floor": "21",
+      "unit": "F7",
+      "address": "F座 21樓 F7室",
+      "priceHKD": 3200000,
+      "saleableAreaSqft": 282,
+      "saleableHkdPerSqft": 11348,
+      "grossAreaSqft": 377,
+      "transactionKind": "registry",
+      "source": "28Hse",
+      "providerIds": [
+        "95248",
+        "NO2026111926111901990070"
+      ],
+      "sourceUrls": [
+        "https://www.28hse.com/estate/detail/得寶花園-2083/history/blockno-6/unitid-95248",
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E4%B9%9D%E9%BE%8D%E7%81%A3-%E5%BE%97%E5%AF%B6%E8%8A%B1%E5%9C%92-NO2026111926111901990070"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "28Hse",
+        "美聯 Midland"
+      ]
+    },
     {
       "estateId": "metro-city",
       "estate": "新都城",
@@ -332,6 +390,60 @@
       ],
       "sourceUrls": [
         "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E8%97%8D%E7%94%B0-%E5%BA%B7%E8%8F%AF%E8%8B%91-NO2026110926110900650057"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "美聯 Midland"
+      ]
+    },
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "3期",
+      "date": "2026-11-07",
+      "block": "4",
+      "floor": "中層",
+      "unit": "A",
+      "address": "新都城 4座 中層 A",
+      "priceHKD": 7000000,
+      "saleableAreaSqft": 470,
+      "saleableHkdPerSqft": 14894,
+      "grossAreaSqft": 644,
+      "transactionKind": "market",
+      "source": "美聯 Midland",
+      "providerIds": [
+        "I20261100472"
+      ],
+      "sourceUrls": [
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100472"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "美聯 Midland"
+      ]
+    },
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "3期",
+      "date": "2026-11-06",
+      "block": "4",
+      "floor": "中層",
+      "unit": "G",
+      "address": "新都城 4座 中層 G",
+      "priceHKD": 9280000,
+      "saleableAreaSqft": 626,
+      "saleableHkdPerSqft": 14824,
+      "grossAreaSqft": 866,
+      "transactionKind": "market",
+      "source": "美聯 Midland",
+      "providerIds": [
+        "I20261100465"
+      ],
+      "sourceUrls": [
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100465"
       ],
       "hasDiscrepancy": false,
       "sources": [
@@ -825,7 +937,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ],
       "phase": "3期"
@@ -1304,7 +1415,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -27237,10 +27347,10 @@
     }
   ],
   "estateCounts": {
-    "metro-city": 503,
+    "metro-town": 85,
+    "tak-bo-garden": 113,
+    "metro-city": 505,
     "hong-wah-court": 116,
-    "metro-town": 84,
-    "tak-bo-garden": 112,
     "sun-sing-centre": 57,
     "the-holborn": 105
   },

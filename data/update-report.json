@@ -1,27 +1,27 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-18T08:09:13+00:00",
+  "generatedAt": "2026-11-20T06:46:59+00:00",
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 971,
-      "latestDate": "2026-11-04",
+      "records": 972,
+      "latestDate": "2026-11-20",
       "errors": []
     },
     "hse28": {
       "status": "ok",
       "records": 150,
-      "latestDate": "2026-11-16",
+      "latestDate": "2026-11-19",
       "errors": []
     },
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-15",
+      "latestDate": "2026-11-18",
       "errors": []
     }
   },
   "errors": [],
-  "recordCount": 977,
+  "recordCount": 981,
   "action": "published"
 }
