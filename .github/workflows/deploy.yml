@@ -1,0 +1,41 @@
+name: Deploy dashboard
+description: >-
+  Publish the HK estate transaction dashboard to GitHub Pages.
+  The dataset itself is refreshed on Chris's Mac (see scripts/daily_refresh.sh),
+  because 28Hse and Midland permanently block GitHub's shared runner IPs.
+  This workflow only rebuilds and deploys whatever is on main.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -45,9 +45,36 @@ python3 -m http.server 8765                    # then open http://127.0.0.1:8765
 
 ## Schedule
 
-`.github/workflows/daily-update.yml` runs every day at 07:10 Hong Kong time (23:10 UTC), commits the refreshed dataset, and deploys GitHub Pages.
+**The daily refresh runs on Chris's Mac, not on GitHub Actions.**
 
-Enable **Settings → Pages → Source: GitHub Actions** once after the first deployment.
+28Hse and Midland permanently block GitHub's shared runner IP ranges (Midland returns `HTTP 403`, 28Hse serves a bot-check page with zero transaction rows). Centaline still works from the runner, so a CI-only pipeline would publish a single-source dataset — the exact failure the source guard was built to prevent. The runner's IP is simply not usable for two of the three providers.
+
+Instead, a launchd agent runs the update on the Mac, where the residential IP is not blocked:
+
+```text
+~/Library/LaunchAgents/hk-transaction-dashboard.daily-refresh.plist
+  └─ scripts/daily_refresh.sh   (daily 07:10 local time)
+       ├─ git fetch / rebase origin/main
+       ├─ python3 scripts/update_data.py      (3 attempts, 30s apart)
+       ├─ python3 scripts/check_sources.py    (gate: all three providers must return records)
+       ├─ git commit + push
+       └─ push triggers .github/workflows/deploy.yml → GitHub Pages
+```
+
+`scripts/check_sources.py` is the gate: if any provider returns zero records, the script restores the previous dataset and pushes nothing, so a blocked run can never blank or degrade the site.
+
+The PAT lives outside the repo at `~/.config/hk-transaction-dashboard/pat` (mode 600) and is passed to git via a temporary `http.extraheader`, never written into the remote URL or git config.
+
+To check it ran:
+
+```bash
+tail -20 ~/Library/Logs/hk-transaction-dashboard/update.log
+launchctl list | grep hk-transaction-dashboard
+```
+
+`.github/workflows/deploy.yml` rebuilds and deploys GitHub Pages on every push to `main`.
+
+> **Requirement:** the Mac must be awake and online at 07:10 for the scheduled run. If it is asleep, launchd runs the job when the machine next wakes.
 
 ## Configuration
 
