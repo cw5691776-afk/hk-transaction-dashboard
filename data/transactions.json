@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-22T23:11:28+00:00",
+  "generatedAt": "2026-11-23T23:11:28+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -62,14 +62,14 @@
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 971,
+      "records": 970,
       "latestDate": "2026-11-20",
       "errors": []
     },
     "hse28": {
       "status": "ok",
       "records": 148,
-      "latestDate": "2026-11-19",
+      "latestDate": "2026-11-23",
       "errors": []
     },
     "midland": {
@@ -80,6 +80,60 @@
     }
   },
   "records": [
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "1期",
+      "date": "2026-11-23",
+      "block": "6",
+      "floor": "5",
+      "unit": "A",
+      "address": "6座 5樓 A室",
+      "priceHKD": 3900000,
+      "saleableAreaSqft": 526,
+      "saleableHkdPerSqft": 7414,
+      "grossAreaSqft": null,
+      "transactionKind": "registry",
+      "source": "28Hse",
+      "providerIds": [
+        "10971"
+      ],
+      "sourceUrls": [
+        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-1/blockno-6/unitid-10971"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "28Hse"
+      ]
+    },
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "3期",
+      "date": "2026-11-23",
+      "block": "3",
+      "floor": "23",
+      "unit": "D",
+      "address": "3座 23樓 D室",
+      "priceHKD": 3300000,
+      "saleableAreaSqft": 470,
+      "saleableHkdPerSqft": 7021,
+      "grossAreaSqft": null,
+      "transactionKind": "registry",
+      "source": "28Hse",
+      "providerIds": [
+        "15206"
+      ],
+      "sourceUrls": [
+        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-3/blockno-20/unitid-15206"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "28Hse"
+      ]
+    },
     {
       "estateId": "metro-town",
       "estate": "都會軒",
@@ -27347,9 +27401,9 @@
     }
   ],
   "estateCounts": {
+    "metro-city": 507,
     "metro-town": 85,
     "tak-bo-garden": 113,
-    "metro-city": 505,
     "hong-wah-court": 116,
     "sun-sing-centre": 57,
     "the-holborn": 105
