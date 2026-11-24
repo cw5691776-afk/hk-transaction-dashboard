@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-23T23:11:28+00:00",
+  "generatedAt": "2026-11-24T23:11:32+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -62,14 +62,14 @@
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 970,
+      "records": 967,
       "latestDate": "2026-11-20",
       "errors": []
     },
     "hse28": {
       "status": "ok",
-      "records": 148,
-      "latestDate": "2026-11-23",
+      "records": 150,
+      "latestDate": "2026-11-24",
       "errors": []
     },
     "midland": {
@@ -80,6 +80,60 @@
     }
   },
   "records": [
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "3期",
+      "date": "2026-11-24",
+      "block": "4",
+      "floor": "23",
+      "unit": "A",
+      "address": "4座 23樓 A室",
+      "priceHKD": 7000000,
+      "saleableAreaSqft": 470,
+      "saleableHkdPerSqft": 14894,
+      "grossAreaSqft": null,
+      "transactionKind": "registry",
+      "source": "28Hse",
+      "providerIds": [
+        "15547"
+      ],
+      "sourceUrls": [
+        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-3/blockno-21/unitid-15547"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "28Hse"
+      ]
+    },
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "1期",
+      "date": "2026-11-24",
+      "block": "5",
+      "floor": "31",
+      "unit": "G",
+      "address": "5座 31樓 G室",
+      "priceHKD": 1020,
+      "saleableAreaSqft": 701,
+      "saleableHkdPerSqft": 14551,
+      "grossAreaSqft": null,
+      "transactionKind": "registry",
+      "source": "28Hse",
+      "providerIds": [
+        "10425"
+      ],
+      "sourceUrls": [
+        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-1/blockno-5/unitid-10425"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "28Hse"
+      ]
+    },
     {
       "estateId": "metro-city",
       "estate": "新都城",
@@ -27401,7 +27455,7 @@
     }
   ],
   "estateCounts": {
-    "metro-city": 507,
+    "metro-city": 509,
     "metro-town": 85,
     "tak-bo-garden": 113,
     "hong-wah-court": 116,

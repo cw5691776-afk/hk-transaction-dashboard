@@ -1,16 +1,16 @@
 {
-  "lastSuccessAt": "2026-11-23T23:11:28+00:00",
+  "lastSuccessAt": "2026-11-24T23:11:32+00:00",
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 970,
+      "records": 967,
       "latestDate": "2026-11-20",
       "errors": []
     },
     "hse28": {
       "status": "ok",
-      "records": 148,
-      "latestDate": "2026-11-23",
+      "records": 150,
+      "latestDate": "2026-11-24",
       "errors": []
     },
     "midland": {
