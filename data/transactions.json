@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-24T23:11:32+00:00",
+  "generatedAt": "2026-11-25T23:11:30+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -62,7 +62,7 @@
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 967,
+      "records": 970,
       "latestDate": "2026-11-20",
       "errors": []
     },
@@ -75,7 +75,7 @@
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-18",
+      "latestDate": "2026-11-23",
       "errors": []
     }
   },
@@ -93,18 +93,21 @@
       "priceHKD": 7000000,
       "saleableAreaSqft": 470,
       "saleableHkdPerSqft": 14894,
-      "grossAreaSqft": null,
+      "grossAreaSqft": 644,
       "transactionKind": "registry",
       "source": "28Hse",
       "providerIds": [
-        "15547"
+        "15547",
+        "I20261100472"
       ],
       "sourceUrls": [
-        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-3/blockno-21/unitid-15547"
+        "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-3/blockno-21/unitid-15547",
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100472"
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "美聯 Midland"
       ]
     },
     {
@@ -132,6 +135,33 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse"
+      ]
+    },
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "1期",
+      "date": "2026-11-23",
+      "block": "5",
+      "floor": "31",
+      "unit": "G",
+      "address": "新都城 5座 31 G",
+      "priceHKD": 10200000,
+      "saleableAreaSqft": 701,
+      "saleableHkdPerSqft": 14551,
+      "grossAreaSqft": 909,
+      "transactionKind": "registry",
+      "source": "美聯 Midland",
+      "providerIds": [
+        "I20261100474"
+      ],
+      "sourceUrls": [
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100474"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
+        "美聯 Midland"
       ]
     },
     {
@@ -27455,7 +27485,7 @@
     }
   ],
   "estateCounts": {
-    "metro-city": 509,
+    "metro-city": 510,
     "metro-town": 85,
     "tak-bo-garden": 113,
     "hong-wah-court": 116,

@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-24T23:11:32+00:00",
+  "generatedAt": "2026-11-25T23:11:30+00:00",
   "sources": {
     "centaline": {
       "status": "ok",
-      "records": 967,
+      "records": 970,
       "latestDate": "2026-11-20",
       "errors": []
     },
@@ -17,11 +17,11 @@
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-18",
+      "latestDate": "2026-11-23",
       "errors": []
     }
   },
   "errors": [],
-  "recordCount": 985,
+  "recordCount": 986,
   "action": "published"
 }
