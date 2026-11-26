@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-25T23:11:30+00:00",
+  "generatedAt": "2026-11-26T23:11:18+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -61,10 +61,12 @@
   ],
   "sources": {
     "centaline": {
-      "status": "ok",
-      "records": 970,
+      "status": "warning",
+      "records": 474,
       "latestDate": "2026-11-20",
-      "errors": []
+      "errors": [
+        "metro-city: HTTP Error 502: Bad Gateway"
+      ]
     },
     "hse28": {
       "status": "ok",
@@ -75,7 +77,7 @@
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-23",
+      "latestDate": "2026-11-24",
       "errors": []
     }
   },
@@ -107,6 +109,33 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
+        "美聯 Midland"
+      ]
+    },
+    {
+      "estateId": "tak-bo-garden",
+      "estate": "得寶花園",
+      "district": "九龍灣",
+      "phase": null,
+      "date": "2026-11-24",
+      "block": "E",
+      "floor": "22",
+      "unit": "E6",
+      "address": "得寶花園 E座 22 E6",
+      "priceHKD": 3888000,
+      "saleableAreaSqft": 282,
+      "saleableHkdPerSqft": 13787,
+      "grossAreaSqft": 395,
+      "transactionKind": "registry",
+      "source": "美聯 Midland",
+      "providerIds": [
+        "NO2026112526112500460010"
+      ],
+      "sourceUrls": [
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E4%B9%9D%E9%BE%8D%E7%81%A3-%E5%BE%97%E5%AF%B6%E8%8A%B1%E5%9C%92-NO2026112526112500460010"
+      ],
+      "hasDiscrepancy": false,
+      "sources": [
         "美聯 Midland"
       ]
     },
@@ -304,8 +333,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -445,8 +473,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -707,8 +734,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -826,8 +852,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -859,8 +884,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -892,8 +916,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "2期"
     },
@@ -925,8 +948,7 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
-        "中原 Centadata"
+        "美聯 Midland"
       ],
       "phase": "1期"
     },
@@ -1074,8 +1096,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -1195,8 +1216,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -1253,8 +1273,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -1397,8 +1416,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -1427,8 +1445,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -1460,7 +1477,6 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland",
         "中原 Centadata"
       ]
     },
@@ -1581,8 +1597,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "1期"
     },
@@ -1727,8 +1742,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "1期"
     },
@@ -1757,8 +1771,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "1期"
     },
@@ -1819,8 +1832,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -1878,8 +1890,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -1908,8 +1919,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -1938,8 +1948,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -1968,8 +1977,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "1期"
     },
@@ -2193,8 +2201,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -2223,8 +2230,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -2395,8 +2401,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -2483,8 +2488,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "3期"
     },
@@ -2513,8 +2517,7 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse",
-        "中原 Centadata"
+        "28Hse"
       ],
       "phase": "2期"
     },
@@ -27486,11 +27489,13 @@
   ],
   "estateCounts": {
     "metro-city": 510,
+    "tak-bo-garden": 114,
     "metro-town": 85,
-    "tak-bo-garden": 113,
     "hong-wah-court": 116,
     "sun-sing-centre": 57,
     "the-holborn": 105
   },
-  "updateErrors": []
+  "updateErrors": [
+    "centaline: metro-city: HTTP Error 502: Bad Gateway"
+  ]
 }

@@ -1,12 +1,14 @@
 {
-  "ok": true,
-  "generatedAt": "2026-11-25T23:11:30+00:00",
+  "ok": false,
+  "generatedAt": "2026-11-26T23:11:18+00:00",
   "sources": {
     "centaline": {
-      "status": "ok",
-      "records": 970,
+      "status": "warning",
+      "records": 474,
       "latestDate": "2026-11-20",
-      "errors": []
+      "errors": [
+        "metro-city: HTTP Error 502: Bad Gateway"
+      ]
     },
     "hse28": {
       "status": "ok",
@@ -17,11 +19,13 @@
     "midland": {
       "status": "ok",
       "records": 60,
-      "latestDate": "2026-11-23",
+      "latestDate": "2026-11-24",
       "errors": []
     }
   },
-  "errors": [],
-  "recordCount": 986,
+  "errors": [
+    "centaline: metro-city: HTTP Error 502: Bad Gateway"
+  ],
+  "recordCount": 987,
   "action": "published"
 }
