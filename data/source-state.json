@@ -1,17 +1,15 @@
 {
-  "lastSuccessAt": "2026-11-26T23:11:18+00:00",
+  "lastSuccessAt": "2026-11-27T23:11:32+00:00",
   "sources": {
     "centaline": {
-      "status": "warning",
-      "records": 474,
-      "latestDate": "2026-11-20",
-      "errors": [
-        "metro-city: HTTP Error 502: Bad Gateway"
-      ]
+      "status": "ok",
+      "records": 970,
+      "latestDate": "2026-11-27",
+      "errors": []
     },
     "hse28": {
       "status": "ok",
-      "records": 150,
+      "records": 149,
       "latestDate": "2026-11-24",
       "errors": []
     },

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-26T23:11:18+00:00",
+  "generatedAt": "2026-11-27T23:11:32+00:00",
   "timezone": "Asia/Hong_Kong",
   "estates": [
     {
@@ -61,16 +61,14 @@
   ],
   "sources": {
     "centaline": {
-      "status": "warning",
-      "records": 474,
-      "latestDate": "2026-11-20",
-      "errors": [
-        "metro-city: HTTP Error 502: Bad Gateway"
-      ]
+      "status": "ok",
+      "records": 970,
+      "latestDate": "2026-11-27",
+      "errors": []
     },
     "hse28": {
       "status": "ok",
-      "records": 150,
+      "records": 149,
       "latestDate": "2026-11-24",
       "errors": []
     },
@@ -82,6 +80,34 @@
     }
   },
   "records": [
+    {
+      "estateId": "metro-city",
+      "estate": "新都城",
+      "district": "將軍澳",
+      "phase": "2期",
+      "date": "2026-11-27",
+      "block": "11",
+      "floor": null,
+      "unit": "D",
+      "address": "11座 高層 D室",
+      "priceHKD": 6000000.0,
+      "saleableAreaSqft": 441,
+      "saleableHkdPerSqft": 13605,
+      "grossAreaSqft": 617,
+      "transactionKind": "market",
+      "source": "中原 Centadata",
+      "providerIds": [
+        "KPN1202611S0062"
+      ],
+      "sourceUrls": [
+        "https://hk.centanet.com/findproperty/transaction-detail/新都城-2期_KPN1202611S0062"
+      ],
+      "buildingCode": "11座",
+      "hasDiscrepancy": false,
+      "sources": [
+        "中原 Centadata"
+      ]
+    },
     {
       "estateId": "metro-city",
       "estate": "新都城",
@@ -100,16 +126,19 @@
       "source": "28Hse",
       "providerIds": [
         "15547",
-        "I20261100472"
+        "I20261100472",
+        "26112401890112"
       ],
       "sourceUrls": [
         "https://www.28hse.com/estate/detail/新都城-4000/history/stateno-3/blockno-21/unitid-15547",
-        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100472"
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100472",
+        "https://hk.centanet.com/findproperty/transaction-detail/新都城-3期-都會豪庭_26112401890112"
       ],
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ]
     },
     {
@@ -183,14 +212,17 @@
       "transactionKind": "registry",
       "source": "美聯 Midland",
       "providerIds": [
-        "I20261100474"
+        "I20261100474",
+        "26112401830722"
       ],
       "sourceUrls": [
-        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100474"
+        "https://www.midland.com.hk/zh-hk/transaction/%E4%B9%9D%E9%BE%8D-%E5%AF%B6%E7%90%B3-%E6%96%B0%E9%83%BD%E5%9F%8E-I20261100474",
+        "https://hk.centanet.com/findproperty/transaction-detail/新都城-1期_26112401830722"
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ]
     },
     {
@@ -333,7 +365,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -473,7 +506,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -734,7 +768,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -852,7 +887,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -884,7 +920,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -916,7 +953,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -948,7 +986,8 @@
       "hasDiscrepancy": false,
       "sources": [
         "28Hse",
-        "美聯 Midland"
+        "美聯 Midland",
+        "中原 Centadata"
       ],
       "phase": "1期"
     },
@@ -1096,7 +1135,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -1216,7 +1256,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -1273,7 +1314,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -1416,7 +1458,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -1445,7 +1488,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -1597,7 +1641,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "1期"
     },
@@ -1742,7 +1787,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "1期"
     },
@@ -1771,7 +1817,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "1期"
     },
@@ -1832,7 +1879,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -1890,7 +1938,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -1919,7 +1968,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -1948,7 +1998,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -1977,7 +2028,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "1期"
     },
@@ -2201,7 +2253,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -2230,7 +2283,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -2401,7 +2455,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -2488,7 +2543,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "3期"
     },
@@ -2517,7 +2573,8 @@
       ],
       "hasDiscrepancy": false,
       "sources": [
-        "28Hse"
+        "28Hse",
+        "中原 Centadata"
       ],
       "phase": "2期"
     },
@@ -27488,14 +27545,12 @@
     }
   ],
   "estateCounts": {
-    "metro-city": 510,
+    "metro-city": 511,
     "tak-bo-garden": 114,
     "metro-town": 85,
     "hong-wah-court": 116,
     "sun-sing-centre": 57,
     "the-holborn": 105
   },
-  "updateErrors": [
-    "centaline: metro-city: HTTP Error 502: Bad Gateway"
-  ]
+  "updateErrors": []
 }
